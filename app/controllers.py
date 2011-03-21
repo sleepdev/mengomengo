@@ -20,7 +20,7 @@ class signin( BaseRequestHandler ):
             user = models.signin( email, password )
             self.set_secure_cookie("user",user.email)
             self.redirect("/recent")
-        else:
+        except:
             self.redirect("/signin?error=signin")
 
 
