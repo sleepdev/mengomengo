@@ -6,7 +6,7 @@ import tornado.web
 
 class BaseRequestHandler( tornado.web.RequestHandler ):
     def current_user( self ):
-        return models.User( self.get_secure_cookie("user") or str(self.request.remote_ip) )
+        return models.User.lookup( self.get_secure_cookie("user") or str(self.request.remote_ip) )
 
 
             
@@ -16,9 +16,9 @@ class signin( BaseRequestHandler ):
     def post( self ):
         email = self.get_argument("email")
         password = self.get_argument("password")
-        user = models.signin( email, password )
-        if user:
-            self.set_secure_cookie("user",user.id)
+        try:
+            user = models.signin( email, password )
+            self.set_secure_cookie("user",user.email)
             self.redirect("/recent")
         else:
             self.redirect("/signin?error=signin")
@@ -41,20 +41,18 @@ class signup( BaseRequestHandler ):
         password = self.get_argument("password")
         if not RE_EMAIL.match(email): 
            return self.redirect("/signup?error=email")
-        user = models.signup( email, password )
-        if user:
-            mymail.confirm_signup( user )
+        try:
+            user = models.signup( email, password )
+            mymail.confirm_signup( user.email )
             self.redirect("/signin")
-        else:
+        except:
             self.redirect("/signin?error=duplicate_signup")
 
 
 
 class index( BaseRequestHandler ):
     def get( self ):
-        q = self.current_user.recommend_query()
-        v = self.current_user.recommend_video( q )
-        self.redirect( "/player?v=%s&q=%s" % (v.id,tornado.escape.url_escape(q)) )
+        self.render("index.html")
 
 
 

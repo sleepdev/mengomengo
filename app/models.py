@@ -1,9 +1,6 @@
-import nosqlsql as orm
-orm.models = globals()
-signin = orm.signin
-signup = orm.signup
+import nos
+from nos_scaffolding import AuthUser
 
-def User( orm.Object ):
-    pass
 
-def 
+
+
