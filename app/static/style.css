@@ -1,0 +1,61 @@
+/* Styles Reset */
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, cite, a, abbr, acronym, address, em, strong, img, dl, dt, dd, ol, ul, li, form, fieldset, legend, label, table, caption, tbody, tfoot, thead, tr, th, td { padding: 0; border: 0; outline: 0; margin: 0; font-size: 1.0em; font-weight: inherit; font-family: inherit; font-style: inherit; vertical-align: baseline; }
+ol, ul { list-style: none; }
+
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+
+a { text-decoration: none; }
+a:link { color: #444444; text-decoration: none; }
+a:visited { color:#444444; }
+a:hover { text-decoration: underline; }
+
+/* Font Reset */
+body{font:13px/1.231 helvetica, arial, freesans, clean, sans-serif;*font-size:small;*font:x-small;}
+select,input,button,textarea,button{font:99% helvetica, arial, freesans, clean, sans-serif;}
+table{font-size:inherit;font:100%;}
+pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+/* Base Styles */
+
+html { background: #555; }
+
+#header { position: fixed; top: 0; height: 30px; width: 100%; line-height: 30px; 
+          background: #000; color: #F00; border-bottom: 1px solid #222; }
+#header > form { float: left; }
+#header > form > label { margin-left: 25px; margin-right: 25px; }
+#header a { display: inline-block; color: #F00; cursor: pointer; }
+#header a:hover { text-shadow: #F44 0px 0px 5px; }
+#header > span, #header > a { float: right; margin-right: 30px;  }
+#header .username { position: relative; }
+#header .username > a { font-weight: bold; margin-right: 30px; text-decoration: none; text-shadow: none; }
+#header .username:hover > a:before { content: "▼ "; }
+#header .username #user-dd { display: none; position: absolute; top: 30px; left: -30px; background: #000; border: 1px solid #222; border-radius: 5px; padding: 5px 17px 9px; } 
+#header .username:hover #user-dd, #user-dd:hover { display: block; }
+
+
+#footer { position: fixed; bottom: 0; height: 30px; width: 100%; line-height: 30px; 
+          background: #000; color: #F00; border-top: 1px solid #222; text-align: center; }
+
+#player { position: absolute; top: 50%; left: 50%; height: 440px; margin-top: -250px; width: 660px; margin-left: -330px; } 
+#player #pre-player { float: left; width: 660px; height: 10px; background: #444; 
+                      border-top-left-radius: 10px 10px; border-top-right-radius: 10px 10px;  }
+#player #left-player { float: left; width: 10px; height: 420px; background: #444; }
+#player object { float: left; padding: 0; margin: 0; height: 420px; width: 640px; }
+#player #right-player { float: left; width: 10px; height: 420px; background: #444; }
+#player #post-player { float: left; width: 660px; height: 10px; background: #444; margin-bottom: 20px; 
+                    border-bottom-left-radius: 10px 10px; border-bottom-right-radius: 10px 10px; }
+#player #rate > a { margin-right: 70px; line-height: 50px; cursor: pointer; }
+#player #rate > :nth-child(1) { margin-left: 245px; }
+
+#content { margin: 60px auto 60px; padding: 20px; width: 700px; border-top: 1px solid #844; border-left: 1px solid #644; border-top-left-radius: 10px 10px; min-height: 400px; }
+#content h1 { font-size: 181%; padding: 0 0 20px 5px; font-weight: bold; font-family: monospace; }
+#content ul { padding: 3px 5px; background: #444; border-radius: 10px; }
+#content li { margin: 3px 0; height: 50px; width: 100%; background: #000; border: 1px solid #222; border-radius: 10px; }
+#content li span { float: left; margin: 0 15px; line-height: 50px; font-size: 131%; color: #bbb; }
+#content li a { float: right; padding: 7px; color: #bbb; }
+#content li :nth-child(2) { margin-right: 12px; }
+#content li label { display: inline-block; width: 150px; }
+
+
+

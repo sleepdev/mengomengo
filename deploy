@@ -1,0 +1,6 @@
+#!/bin/sh
+
+pkill python
+mkdir -p /var/log/app
+python -c "import app" 1>>/var/log/app/access.log 2>>/var/log/app/error.log &
+
