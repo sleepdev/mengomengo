@@ -1,0 +1,32 @@
+/* Styles Reset */
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, cite, a, abbr, acronym, address, em, strong, img, dl, dt, dd, ol, ul, li, form, fieldset, legend, label, table, caption, tbody, tfoot, thead, tr, th, td { padding: 0; border: 0; outline: 0; margin: 0; font-size: 1.0em; font-weight: inherit; font-family: inherit; font-style: inherit; vertical-align: baseline; }
+ol, ul { list-style: none; }
+
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+
+a { text-decoration: none; }
+a:link { color: #444444; text-decoration: none; }
+a:visited { color:#444444; }
+a:hover { text-decoration: underline; }
+
+/* Font Reset */
+body{font:13px/1.231 helvetica, arial, freesans, clean, sans-serif;*font-size:small;*font:x-small;}
+select,input,button,textarea,button{font:99% helvetica, arial, freesans, clean, sans-serif;}
+table{font-size:inherit;font:100%;}
+pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+/* Base Styles */
+
+html { background: #FFFFFF; }
+
+#landing { width: 950px; margin: 0 auto; }
+#landing h1 { padding: 50px 0; text-align: center; font-weight: bold; font-size: 90px; color: #FBB829; }
+#landing .left, #landing .right { width: 475px; float: left; }
+#landing .left img { display: block; margin: 0 auto; border: 25px solid #7FFF24; rounded-corner: 5px; }
+#landing .fb-login-button { display: table; margin: 0 auto; }
+#landing h2 { text-align: center; padding: 22px 32px 38px; font-weight: bold; font-size: 49px; color: #7FFF24; }
+
+
+
+

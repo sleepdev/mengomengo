@@ -1,4 +1,4 @@
-import mail
+import extras.mymail as mymail
 import models
 import re
 import tornado.web
