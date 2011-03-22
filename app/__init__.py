@@ -21,8 +21,7 @@ application = tornado.web.Application( [
 
 
 
-if __name__ == "__main__":
-   tornado.httpserver.HTTPServer(application, xheaders=True ).listen( 80 )
-   tornado.ioloop.IOLoop.instance().start()
+tornado.httpserver.HTTPServer(application, xheaders=True ).listen( 80 )
+tornado.ioloop.IOLoop.instance().start()
 
 
