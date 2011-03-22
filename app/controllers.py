@@ -13,3 +13,7 @@ class connect( tornado.web.RequestHandler ):
         self.render("connect.html")
 
 
+
+class myfeed( tornado.web.RequestHandler ):
+    def get( self ):
+        self.render("myfeed.html")

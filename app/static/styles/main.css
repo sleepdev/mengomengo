@@ -12,6 +12,9 @@ a:hover { text-decoration: underline; }
 
 
 /* Base Styles */
+
+
+/* Page Styles */
 #landing { width: 950px; margin: 0 auto; font-family: Ubuntu; }
 #landing h1 { padding: 50px 0; text-align: center; font-weight: bold; font-size: 90px; color: #FBB829; }
 #landing h2 { text-align: center; padding: 30px 32px 40px; font-weight: bold; font-size: 49px; color: #7FFF24; }
@@ -19,6 +22,8 @@ a:hover { text-decoration: underline; }
 #landing .left img { display: block; margin: 0 auto; border: 25px solid #7FFF24; rounded-corner: 5px; }
 #landing .right img { display: table; margin: 0 auto; }
 
-
+#myfeed #feed { width: 490px; padding: 5px; border-bottom: 1px solid #7FFF24; }
+#myfeed img { border: 10px solid #7FFF24; }
+.friend, .title { color: #7FFF24; }
 
 
