@@ -21,15 +21,8 @@ application = tornado.web.Application( [
 
 
 
-#requires one command line argument, specifying the port to run on 
 if __name__ == "__main__":
-   assert len(sys.argv)==2 
-
-   http_server = tornado.httpserver.HTTPServer(application, xheaders=True )
-
-   listen_port = int(sys.argv[1])
-   http_server.listen( listen_port )
-
+   tornado.httpserver.HTTPServer(application, xheaders=True ).listen( 80 )
    tornado.ioloop.IOLoop.instance().start()
 
 
