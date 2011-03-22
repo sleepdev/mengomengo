@@ -22,8 +22,8 @@ a:hover { text-decoration: underline; }
 #landing .left img { display: block; margin: 0 auto; border: 25px solid #7FFF24; rounded-corner: 5px; }
 #landing .right img { display: table; margin: 0 auto; }
 
-#myfeed #feed { width: 490px; padding: 5px; border-bottom: 1px solid #7FFF24; }
+#myfeed #feed ul { width: 490px; padding: 5px; border-bottom: 1px solid #7FFF24; }
 #myfeed img { border: 10px solid #7FFF24; }
-.friend, .title { color: #7FFF24; }
+.friend, .title { color: #FBB829; }
 
 
