@@ -9,8 +9,9 @@ import sys
 
 
 settings = dict(
-   cookie_secret  =  "swe5dr6ft7gyhujikols35ed6rft7g8yuh9j",
-   template_path  =  "/var/app/views"
+   cookie_secret  =  "DFT&GY*UHJ76879u0i&^%*TY&(H*U)J&^T*GY&HU(F&T",
+   static_path    = os.path.join(os.path.dirname(__file__), "static"),
+   template_path  = os.path.join(os.path.dirname(__file__), "views"),
 )
 
 application = tornado.web.Application( [
