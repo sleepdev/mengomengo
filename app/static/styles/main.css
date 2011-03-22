@@ -12,7 +12,7 @@ a:hover { text-decoration: underline; }
 
 
 /* Base Styles */
-#body { width: 950px; margin: 0 auto; font-family: Ubuntu; }
+body { width: 950px; margin: 0 auto; font-family: Ubuntu; }
 
 
 /* Page Styles */
