@@ -23,11 +23,12 @@ body { width: 950px; margin: 0 auto; font-family: Ubuntu; }
 #landing .left img { display: block; margin: 0 auto; border: 25px solid #7FFF24; rounded-corner: 5px; }
 #landing .right img { display: table; margin: 0 auto; }
 
-#myfeed .left { width: 200; float: left; }
+#myfeed .left { width: 200px; height: 100%; float: left; }
 #myfeed .center { width: 490px; margin: 10px; float: left; }
 #myfeed .right { }
+#myfeed li p { line-height: 1.3em; padding-bottom: 5px; }
 #myfeed li { border-bottom: 1px solid #7FFF24; }
-#myfeed img { border: 10px solid #7FFF24; }
+#myfeed li img { border: 10px solid #7FFF24; }
 .friend, .title { color: #FBB829; }
 
 
