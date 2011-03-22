@@ -10,15 +10,9 @@ a:link { color: #444444; text-decoration: none; }
 a:visited { color:#444444; }
 a:hover { text-decoration: underline; }
 
-/* Font Reset */
-body{font:13px/1.231 helvetica, arial, freesans, clean, sans-serif;*font-size:small;*font:x-small;}
-select,input,button,textarea,button{font:99% helvetica, arial, freesans, clean, sans-serif;}
-table{font-size:inherit;font:100%;}
-pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
 
 /* Base Styles */
-
-html { background: #FFFFFF; }
+html { background: #FFFFFF; font-family: Ubuntu; }
 
 #landing { width: 950px; margin: 0 auto; }
 #landing h1 { padding: 50px 0; text-align: center; font-weight: bold; font-size: 90px; color: #FBB829; }
