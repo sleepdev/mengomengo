@@ -9,16 +9,13 @@ import sys
 
 
 settings = dict(
-   cookie_secret  =  "4s35de6ftg7yuh9jik4se5dtrf6yguhi",
+   cookie_secret  =  "swe5dr6ft7gyhujikols35ed6rft7g8yuh9j",
    template_path  =  "/var/app/views"
 )
 
 application = tornado.web.Application( [
-    ( "/",                          controllers.index       ),
-    ( "/player",                    controllers.player      ),
-    ( "/signin",                    controllers.signin      ),
-    ( "/signout",                   controllers.signout     ),
-    ( "/signup",                    controllers.signup      ),
+    ( "/",                          controllers.index
+    ( "/connect",                   controllers.connect     ),
 ], **settings )
 
 
