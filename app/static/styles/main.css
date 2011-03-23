@@ -42,6 +42,13 @@ ul.link-list li.active { background-color: #e1ffcc; }
 ul.news-feed { padding: 15px; }
 ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 
+input.share { 
+  width: 20em;
+  color: #7FFF24;
+  padding: 0.5em 0.5em;
+  margin: 0.5em 0;
+  border: 1px solid #e1ffcc;
+}
 /* Page Styles */
 
 #landing h1 { padding: 50px 0; text-align: center; font-weight: bold; font-size: 90px; color: #FBB829; }
