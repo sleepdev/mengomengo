@@ -10,26 +10,32 @@ a:link { color: #FBB829; text-decoration: none; }
 a:visited { color: #FBB829; }
 a:hover { text-decoration: underline; }
 
+
+/* Helper Styles */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; } /* Hides from IE-mac \*/
+.clearfix { display: block; }
+
+
 /* Base Styles */
 body { width: 950px; margin: 0 auto; font-family: Ubuntu; color: #7FFF24; } 
 body.trifold > .left { width: 180px; float: left; }
 body.trifold > .center { width: 520px; float: left; }
 body.trifold > .right { width: 250px; float: left; }
 
-
+p { padding: 3px 0; }
 
 
 
 
 /* Component Styles */
 
-div.identity {}
-div.identity img { width: 50px; height: 50px; padding-right: 5px; float: left; }
-div.identity
+div.identity img { width: 50px; height: 50px; padding-right: 7px; float: left; }
 
 ul.link-list {}
 
-ul.news-feed {}
+ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 
 /* Page Styles */
 
