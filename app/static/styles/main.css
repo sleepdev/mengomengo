@@ -13,9 +13,13 @@ a:hover { text-decoration: underline; }
 
 /* Base Styles */
 body { width: 950px; margin: 0 auto; font-family: Ubuntu; }
+body.trifold > .left { width: 180px; float: left; }
+body.trifold > .center { width: 520px; float: left; }
+body.trifold > .right { width: 250px; float: left; }
 
 
 /* Component Styles */
+
 div.identity {}
 
 ul.link-list {}
