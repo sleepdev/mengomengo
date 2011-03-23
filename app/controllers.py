@@ -1,7 +1,7 @@
 import tornado.web
 import tornado.database
 
-db = tornado.database(
+db = tornado.database.Connection(
     host="localhost", database="mengomengo",
     user="root", password="mengomengo", 
 )
