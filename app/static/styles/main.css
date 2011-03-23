@@ -27,8 +27,8 @@ body { width: 950px; margin: 0 auto; font-family: Ubuntu; }
 #myfeed .center { width: 490px; margin: 10px; float: left; }
 #myfeed .right { }
 #myfeed li p { line-height: 1.3em; }
-#myfeed li { border-bottom: 1px solid #7FFF24; }
-#myfeed li img { border: 10px solid #7FFF24; margin: 15px 0 10px; }
+#myfeed li { margin-top: 15px; border-bottom: 1px solid #7FFF24; }
+#myfeed li img { border: 10px solid #7FFF24; margin: 15px; }
 .friend, .title { color: #FBB829; }
 
 
