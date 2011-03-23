@@ -21,13 +21,14 @@ a:hover { text-decoration: underline; }
 /* Base Styles */
 body { width: 950px; margin: 0 auto; font-family: Ubuntu; color: #7FFF24; } 
 body > .left { width: 180px; float: left; }
-body > .center { width: 520px; padding: 0 15px; float: left; }
+body > .center { width: 490px; padding: 0 15px; float: left; }
 body > .right { width: 250px; float: left; }
 
 
 p { padding: 3px 0; }
 
 input {
+  width: 100%; 
   color: #FBB829;
   padding: 0.5em 0.5em;
   margin: 0.5em 0;
