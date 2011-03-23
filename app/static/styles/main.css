@@ -20,9 +20,10 @@ a:hover { text-decoration: underline; }
 
 /* Base Styles */
 body { width: 950px; margin: 0 auto; font-family: Ubuntu; color: #7FFF24; } 
-body.trifold > .left { width: 180px; float: left; }
-body.trifold > .center { width: 520px; float: left; }
-body.trifold > .right { width: 250px; float: left; }
+body > .left { width: 180px; float: left; }
+body > .center { width: 520px; padding: 0 15px; float: left; }
+body > .right { width: 250px; float: left; }
+
 
 p { padding: 3px 0; }
 
@@ -46,7 +47,6 @@ ul.link-list li { padding: 5px 10px; }
 ul.link-list li a { width: 100%; display: block; }
 ul.link-list li.active { background-color: #e1ffcc; }
 
-ul.news-feed { padding: 15px; }
 ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 
 
@@ -58,12 +58,5 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 #landing .left img { display: block; margin: 0 auto; border: 25px solid #7FFF24; rounded-corner: 5px; }
 #landing .right img { display: table; margin: 0 auto; }
 
-#myfeed .left { width: 200px; height: 100%; float: left; }
-#myfeed .center { width: 490px; margin: 10px; float: left; }
-#myfeed .right { }
-#myfeed li p { line-height: 1.3em; }
-#myfeed li { margin-top: 15px; border-bottom: 1px solid #7FFF24; }
-#myfeed li img { border: 10px solid #7FFF24; margin: 15px; }
-.friend, .title { color: #FBB829; }
 
 
