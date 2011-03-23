@@ -20,7 +20,7 @@ a:hover { text-decoration: underline; }
 
 /* Base Styles */
 body { width: 950px; margin: 0 auto; font-family: Ubuntu; color: #7FFF24; } 
-body > .top { width: 100%: height: 50px; }
+body > .top { width: 100%; height: 70px; }
 body > .left { width: 180px; float: left; }
 body > .center { width: 490px; padding: 0 15px; float: left; }
 body > .right { width: 250px; float: left; }
