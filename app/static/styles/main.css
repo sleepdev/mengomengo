@@ -5,23 +5,27 @@ ol, ul { list-style: none; }
 table { border-collapse: separate; border-spacing: 0; }
 caption, th, td { text-align: left; font-weight: normal; }
 
-a { text-decoration: none; }
-a:link { color: #444444; text-decoration: none; }
-a:visited { color:#444444; }
-a:hover { text-decoration: underline; }
-
 
 /* Base Styles */
-body { width: 950px; margin: 0 auto; font-family: Ubuntu; }
+body { width: 950px; margin: 0 auto; font-family: Ubuntu; color: #7FFF24; }
 body.trifold > .left { width: 180px; float: left; }
 body.trifold > .center { width: 520px; float: left; }
 body.trifold > .right { width: 250px; float: left; }
+
+a { text-decoration: none; }
+a:link { color: #FBB829; text-decoration: none; }
+a:visited { color: #FBB829; }
+a:hover { text-decoration: underline; }
+
+
+
 
 
 /* Component Styles */
 
 div.identity {}
 div.identity img { width: 50px; height: 50px; padding-right: 5px; float: left; }
+div.identity
 
 ul.link-list {}
 
