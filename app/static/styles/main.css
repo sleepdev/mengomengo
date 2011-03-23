@@ -21,6 +21,7 @@ body.trifold > .right { width: 250px; float: left; }
 /* Component Styles */
 
 div.identity {}
+div.identity img { width: 50px; height: 50px; padding-right: 5px; float: left; }
 
 ul.link-list {}
 
