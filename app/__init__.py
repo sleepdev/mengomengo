@@ -16,6 +16,10 @@ settings = dict(
 
 application = tornado.web.Application( [
     ( "/",                          controllers.index       ),
+    ( "/api/wallpost",              controllers.api_wallpost ),
+    ( "/api/subscription",          controllers.api_subscription ),
+    ( "/api/playlist",              controllers.api_playlist ),
+    ( "/api/video",                 controllers.api_video ),
 ], **settings )
 
 
