@@ -9,7 +9,7 @@ db = tornado.database.Connection(
 class BaseRequestHandler( tornado.web.RequestHandler ):
     def get_current_user( self ):
 	return self.get_cookie("fbs_204128796282802")
-    def has_permisison( self, verb, owner, object ):
+    def has_permission( self, verb, owner, object ):
         authorized = True
         if not authorized:
             self.write({
