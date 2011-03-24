@@ -6,7 +6,7 @@ db = tornado.database.Connection(
     user="root", password="mengomengo", 
 )
 
-class BaseHandler( BaseRequestHandler ):
+class BaseRequestHandler( tornado.web.RequestHandler ):
     def get_current_user( self ):
 	return self.get_cookie("fbs_204128796282802")
     def has_permisison( self, verb, owner, object ):
