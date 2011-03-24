@@ -10,6 +10,8 @@ db = tornado.database.Connection(
 
 class index( tornado.web.RequestHandler ):
     def get( self ):
+        print self.cookies
+	access_token = self.get_cookie("access_token")
         if False:
             self.render("wall.html")
         else:
