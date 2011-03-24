@@ -33,6 +33,7 @@
     </div>
 
     <div class="right">
+      <a onclick="FB.logout()" href="/">
     </div>
 
     <div id="fb-root"></div>
@@ -46,8 +47,6 @@
         cookie : true, // enable cookies to allow the server to access the session
         xfbml  : true  // parse XFBML
       });
-
-      $('body > .right').text( FB.getSession() );
     </script>
 
   </body>
