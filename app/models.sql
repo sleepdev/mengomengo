@@ -4,37 +4,46 @@ ALTER DATABASE CHARACTER SET "utf8";
 
 
 CREATE TABLE user (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     fb_id VARBINARY(100) NOT NULL UNIQUE
 );
-CREATE TABLE user_playlist (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user INT NOT NULL REFERENCES(user),
-    listname VARBINARY(200) NOT NULL,
-    permissions ENUM('private','shared','public') NOT NULL,
-    UNIQUE KEY(user,listname)
+CREATE TABLE permission (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user BIGINT NOT NULL REFERENCES(user),
+    verb ENUM('read','write','delete') NOT NULL,
+    group_type ENUM('user','playlist') NOT NULL,
+    group BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    object ENUM('wallpost','playlist','subscription','video') NOT NULL
 );
-CREATE TABLE user_video (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user INT NOT NULL REFERENCES(user),
-    playlist INT NOT NULL REFERENCES(playlist),
+
+CREATE TABLE wallpost (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user BIGINT NOT NULL REFERENCES(user),
+    author BIGINT NOT NULL REFERENCES(user),
+    link VARBINARY(500) NOT NULL,
+    message VARBINARY(500),
+    ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    KEY(user,ts)
+);
+CREATE TABLE playlist (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user BIGINT NOT NULL REFERENCES(user),
+    title VARBINARY(500) NOT NULL,
+    permit ENUM('public','shared','private','explicit') NOT NULL,
+    UNIQUE KEY(user,title)
+);
+CREATE TABLE video (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    playlist BIGINT NOT NULL REFERENCES(playlist),
     url VARBINARY(500) NOT NULL,
     title VARBINARY(500),
     episode INT,
     part INT,
-    KEY(user,user_playlist)
+    KEY(playlist)
 );
-CREATE TABLE user_subscription( 
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user INT NOT NULL REFERENCES(user)
-    interest INT NOT NULL,
-    playlist INT NOT NULL REFERENCES(user_playlist)
+CREATE TABLE subscription ( 
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user BIGINT NOT NULL REFERENCES(user),
+    playlist BIGINT NOT NULL REFERENCES(user_playlist)
 );
 
-CREATE TABLE history (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user INT NOT NULL REFERENCES(user),
-    ts TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    action VARBINARY(2000) NOT NULL,
-    KEY(user,ts)
-);
