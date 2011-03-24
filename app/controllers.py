@@ -88,6 +88,7 @@ class api_playlist( BaseRequestHandler ):
         user = self.get_argument("user")
         if self.has_permission("delete",user,"wallpost"):
             title = self.get_argument("title")
+            #TODO, delete iff playlist is empty
             db.execute("delete from playlist where title=%s",title)
 
 
