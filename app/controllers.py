@@ -53,7 +53,7 @@ class api_wallpost( BaseRequestHandler ):
 class api_subscription( BaseRequestHandler ):
     def get( self ):
         user = self.get_argument("user")
-        if self.has_permission("read",user,"subscription")
+        if self.has_permission("read",user,"subscription"):
             start = self.get_argument("start",0)
             limit = self.get_argument("limit",20)
             data = db.query("select * from subscription where user=%s limit %s,%s", user, start, limit)
