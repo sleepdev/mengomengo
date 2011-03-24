@@ -74,7 +74,7 @@ class api_subscription( BaseRequestHandler ):
 class api_playlist( BaseRequestHandler ):
     def get( self ):
         user = self.get_argument("user")
-        if self.has_permission("read",user,"playlist")
+        if self.has_permission("read",user,"playlist"):
             start = self.get_argument("start",0)
             limit = self.get_argument("limit",20)
             data = db.query("select * from playlist where user=%s limit %s,%s", user, start, limit)
@@ -96,7 +96,7 @@ class api_playlist( BaseRequestHandler ):
 class api_video( BaseRequestHandler ):
     def get( self ):
         playlist = self.get_argument("playlist")
-        if self.has_permission("read",playlist,"video")
+        if self.has_permission("read",playlist,"video"):
             start = self.get_argument("start",0)
             limit = self.get_argument("limit",20)
             data = db.query("select * from video where playlist=%s limit %s,%s", playlist, start, limit)
