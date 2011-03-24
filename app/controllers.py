@@ -10,9 +10,8 @@ db = tornado.database.Connection(
 
 class index( tornado.web.RequestHandler ):
     def get( self ):
-        raise self.cookies
-	access_token = self.get_cookie("access_token")
-        if access_token:
+	authenticated = self.get_cookie("fbs_204128796282802")
+        if authenticated:
             self.render("wall.html")
         else:
             self.render("connect.html")
