@@ -12,7 +12,7 @@ class index( tornado.web.RequestHandler ):
     def get( self ):
         print self.cookies
 	access_token = self.get_cookie("access_token")
-        if False:
+        if access_token:
             self.render("wall.html")
         else:
             self.render("connect.html")
