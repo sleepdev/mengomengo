@@ -48,7 +48,7 @@ ul.link-list { padding: 7px 0; }
 ul.link-list li { padding: 5px 10px; border-bottom: 1px solid transparent; border-right: 1px solid transparent; }
 ul.link-list li:hover { border-bottom: 1px solid #7FFF24; border-right: 1px solid #7FFF24; }
 ul.link-list li.active { background-color: #e1ffcc; }
-ul.link-list li a { width: 100%; display: block; }
+ul.link-list li a:hover { text-decoration: none; }
 
 ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 
