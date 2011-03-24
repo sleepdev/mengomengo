@@ -16,7 +16,7 @@
     <div class="right">
       <h1>めんご</h1>
       <h2>Login to see what your friends are watching</h2>
-      <img src="{{ static_url('images/fb1.jpg') }}" style="cursor: pointer;" alt=""/>
+      <img src="{{ static_url('images/fb1.jpg') }}" onclick="FB.login(); window.location='/'" alt=""/>
     </div> 
 
     <div id="fb-root"></div>
