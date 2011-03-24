@@ -16,8 +16,6 @@ settings = dict(
 
 application = tornado.web.Application( [
     ( "/",                          controllers.index       ),
-    ( "/myfeed",                    controllers.myfeed      ),
-    ( "/connect",                   controllers.connect     ),
 ], **settings )
 
 

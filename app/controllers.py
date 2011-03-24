@@ -8,26 +8,13 @@ db = tornado.database.Connection(
 
 
 
-class BaseHandler( tornado.web.RequestHandler ):
-    def current_user( self ):
-        return self.secure_cookie('user')
-
-
-    
 class index( tornado.web.RequestHandler ):
     def get( self ):
-        self.redirect("/connect")
+        if False:
+            self.render("wall.html")
+        else:
+            self.render("connect.html")
 
 
-
-class connect( tornado.web.RequestHandler ):
-    def get( self ):
-        self.render("connect.html")
-
-
-
-class myfeed( tornado.web.RequestHandler ):
-    def get( self ):
-        self.render("myfeed.html")
 
 

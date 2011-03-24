@@ -33,8 +33,23 @@
     </div>
 
     <div class="right">
-      Ads go here
+      <br/>
     </div>
+
+    <div id="fb-root"></div>
+    <script src="http://connect.facebook.net/en_US/all.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="{{ static_url("javascript/main.js") }}"></script>
+    <script>
+      FB.init({
+        appId  : '204128796282802',
+        status : true, // check login status
+        cookie : true, // enable cookies to allow the server to access the session
+        xfbml  : true  // parse XFBML
+      });
+
+      $('body > .right').text( FB.getSession() );
+    </script>
 
   </body>
 </html>
