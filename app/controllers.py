@@ -20,6 +20,8 @@ class BaseRequestHandler( tornado.web.RequestHandler ):
             })
         return authorized
 
+
+
 class index( BaseRequestHandler ):
     def get( self ):
         if self.current_user:
@@ -28,25 +30,27 @@ class index( BaseRequestHandler ):
             self.render("connect.html")
 
 
-class api_wallpost( BaseRequestHandler ):
+
+class api_wall( BaseRequestHandler ):
     def get( self ):
         user = self.get_argument("user")
         if self.has_permission("read",user,"wall"):
             start = self.get_argument("start",0)
             limit = self.get_argument("limit",20)
-            data = db.query("select * from wallpost where user=%s limit %s,%s", user, start, limit)
+            data = db.query("select * from wall where user=%s limit %s,%s", user, start, limit)
             return self.write({"data": data})
     def post( self ): 
         user = self.get_argument("user")
-        if self.has_permission("write",user,"wallpost"):
-            url = self.get_argument("url")
-            message = self.get_argument("message","")
-            db.execute("insert wallpost(url,message) values(%s,%s)",url,message)
+        if self.has_permission("write",user,"wall"):
+            subject = self.get_argument("subject")
+            verb   = self.get_argument("verb")
+            object = self.get_argument("object")
+            db.execute("insert wall(user,subject,verb,object) values(%s,%s,%s,%s)",user,subject,verb,object)
     def delete( self ): 
         user = self.get_argument("user")
-        if self.has_permission("delete",user,"wallpost"):
-            url = self.get_argument("url")
-            db.execute("delete from wallpost where url=%s",url)
+        if self.has_permission("delete",user,"wall"):
+            id = self.get_argument("id")
+            db.execute("delete from wall where user=%s and id=%s",user,id)
             
 
 
@@ -61,53 +65,54 @@ class api_subscription( BaseRequestHandler ):
     def post( self ): 
         user = self.get_argument("user")
         if self.has_permission("write",user,"subscription"):
-            playlist = self.get_argument("playlist")
-            db.execute("insert subscription(playlist) values(%s)",playlist)
+            list = self.get_argument("list")
+            db.execute("insert subscription(list) values(%s)",list)
     def delete( self ): 
         user = self.get_argument("user")
         if self.has_permission("delete",user,"subscription"):
-            playlist = self.get_argument("playlist")
-            db.execute("delete from subscription where playlist=%s",playlist)
+            list = self.get_argument("list")
+            db.execute("delete from subscription where list=%s",list)
 
 
 
-class api_playlist( BaseRequestHandler ):
+class api_list( BaseRequestHandler ):
     def get( self ):
         user = self.get_argument("user")
-        if self.has_permission("read",user,"playlist"):
+        if self.has_permission("read",user,"list"):
             start = self.get_argument("start",0)
             limit = self.get_argument("limit",20)
-            data = db.query("select * from playlist where user=%s limit %s,%s", user, start, limit)
+            data = db.query("select * from list where user=%s limit %s,%s", user, start, limit)
             return self.write({"data": data})
     def post( self ): 
         user = self.get_argument("user")
-        if self.has_permission("write",user,"playlist"):
+        if self.has_permission("write",user,"list"):
             title = self.get_argument("title")
-            db.execute("insert playlist(title) values(%s)",title)
+            db.execute("insert list(title) values(%s)",title)
     def delete( self ): 
         user = self.get_argument("user")
-        if self.has_permission("delete",user,"wallpost"):
+        if self.has_permission("delete",user,"wall"):
             title = self.get_argument("title")
             #TODO, delete iff playlist is empty
-            db.execute("delete from playlist where title=%s",title)
+            db.execute("delete from list where title=%s",title)
 
 
 
 class api_video( BaseRequestHandler ):
     def get( self ):
-        playlist = self.get_argument("playlist")
-        if self.has_permission("read",playlist,"video"):
+        list = self.get_argument("list")
+        if self.has_permission("read",list,"video"):
             start = self.get_argument("start",0)
             limit = self.get_argument("limit",20)
-            data = db.query("select * from video where playlist=%s limit %s,%s", playlist, start, limit)
+            data = db.query("select * from video where list=%s limit %s,%s", playlist, start, limit)
             return self.write({"data": data})
     def post( self ): 
-        playlist = self.get_argument("playlist")
-        if self.has_permission("write",playlist,"video"):
+        list = self.get_argument("list")
+        if self.has_permission("write",list,"video"):
             url = self.get_argument("url")
-            db.execute("insert wallpost(url) values(%s)",url)
+            title = self.get_argument("title")
+            db.execute("insert video(list,url,title) values(%s,%s,%s)",list,url,title)
     def delete( self ): 
-        playlist = self.get_argument("playlist")
-        if self.has_permission("delete",playlist,"wallpost"):
+        list = self.get_argument("list")
+        if self.has_permission("delete",list,"video"):
             url = self.get_argument("url")
-            db.execute("delete from wallpost where url=%s",url)
+            db.execute("delete from video where list=%s and url=%s",list,url)

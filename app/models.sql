@@ -16,35 +16,35 @@ CREATE TABLE permission (
     UNIQUE KEY(user,verb,owner,object)
 );
 
-CREATE TABLE wallpost (
+CREATE TABLE wall (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user BIGINT NOT NULL,
-    author BIGINT NOT NULL,
-    url VARBINARY(500) NOT NULL,
-    message VARBINARY(500),
+    subject BIGINT NOT NULL,
+    verb VARBINARY(100) NOT NULL,
+    object BIGINT NOT NULL,
     ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     KEY(user,ts)
 );
-CREATE TABLE playlist (
+CREATE TABLE list (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user BIGINT NOT NULL,
     title VARBINARY(500) NOT NULL,
-    permit ENUM('public','shared','private','explicit') NOT NULL,
+    permit ENUM('public','shared','private','explicit') NOT NULL DEFAULT 'shared',
     KEY(user)
 );
 CREATE TABLE video (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    playlist BIGINT NOT NULL,
+    list BIGINT NOT NULL,
     url VARBINARY(500) NOT NULL,
     title VARBINARY(500),
     episode INT,
     part INT,
-    KEY(playlist)
+    KEY(list,episode,part)
 );
 CREATE TABLE subscription ( 
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user BIGINT NOT NULL,
-    playlist BIGINT NOT NULL,
+    list BIGINT NOT NULL,
     KEY(user)
 );
 
