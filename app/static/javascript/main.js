@@ -29,7 +29,8 @@ function rest_feed(options)
     /* todo, fix to decide append or prepend order */
     var html = template;
     for( k in json ){
-      html = html.replace('{{'+k+'}}',json[k])
+      html = html.replace('{{'+k+'}}',json[k]);
+      alert( k );
     }
     var dom = $(html);
     dom.data("rest_data",json);
