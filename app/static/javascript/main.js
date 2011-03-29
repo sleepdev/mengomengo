@@ -32,7 +32,7 @@ function rest_feed(options)
       html = html.replace('{{'+k+'}}',json[k])
     }
     var dom = $(html);
-    dom.data("rest_data",data);
+    dom.data("rest_data",json);
     feed.find('.list').append( dom );
     start = start + 1;
   }
