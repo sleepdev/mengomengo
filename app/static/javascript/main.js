@@ -58,9 +58,9 @@ function rest_feed(options)
       dataType: 'json', 
       url: url, 
       data: {start: start, limit: limit},
-      success: function( list ){
-        $.each(list, feed_api.render);
-        if( list.length < limit ) feed.find('.more').hide();
+      success: function( json ){
+        $.each(json.data, feed_api.render);
+        if( json.data.length < limit ) feed.find('.more').hide();
       }
     });
   }
