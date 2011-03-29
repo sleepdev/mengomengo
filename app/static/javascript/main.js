@@ -16,7 +16,7 @@ function logout()
 function rest_feed(options)
 {
   if ( !(this instanceof rest_feed) )
-      return new foo(options);
+      return new rest_feed(options);
 
   var url = options['url'];
   var feed_api = this;
