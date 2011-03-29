@@ -60,7 +60,7 @@ function rest_feed(options)
       url: url, 
       data: {start: start, limit: limit},
       success: function( json ){
-        $.each(json.data, feed_api.render);
+        $.each( json.data, function(i,v){feed_api.render(v)} );
         if( json.data.length < limit ) feed.find('.more').hide();
       }
     });
