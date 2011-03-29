@@ -15,6 +15,9 @@ function logout()
 /* sets up a facebook/twitter style get/post/del data feed */
 function rest_feed(options)
 {
+  if ( !(this instanceof rest_feed) )
+      return new foo(options);
+
   var url = options['url'];
   var feed_api = this;
   var feed = options['feed'] || $('#feed');
@@ -68,8 +71,8 @@ function rest_feed(options)
     });
     ui.slideUp();
   }
-  feed_submit.click(function(){ feed_api.post(); });
-  feed_more.click(function(){ feed_api.get(); });
+  feed.find('.submit').click(function(){ feed_api.post(); });
+  feed.find('.more').click(function(){ feed_api.get(); });
   this.get();
 }
 
