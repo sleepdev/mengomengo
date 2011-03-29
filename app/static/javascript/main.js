@@ -28,10 +28,8 @@ function rest_feed(options)
   this.render = function( json ) {
     /* todo, fix to decide append or prepend order */
     var html = template;
-    alert( "json: " + json );
     for( var k in json ){
       html = html.replace('{{'+k+'}}',json[k]);
-      alert( k + " : " + json[k] );
     }
     var dom = $(html);
     dom.data("rest_data",json);
