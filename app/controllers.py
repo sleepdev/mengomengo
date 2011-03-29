@@ -33,7 +33,8 @@ class index( BaseRequestHandler ):
 
 class api_wall( BaseRequestHandler ):
     def get( self ):
-        user = self.get_argument("user")
+        return self.write({ "text":"item 1", "text":"item 2" })
+        user = self.get_argument("user",self.current_user)
         if self.has_permission("read",user,"wall"):
             start = self.get_argument("start",0)
             limit = self.get_argument("limit",20)
