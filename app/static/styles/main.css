@@ -21,7 +21,7 @@ a:hover { text-decoration: underline; }
 /* Base Styles */
 body { width: 950px; margin: 0 auto; font-family: Ubuntu; color: #7FFF24; } 
 body > .top { width: 100%; height: 70px; }
-body > .left { width: 200px; float: left; }
+body > .left { width: 200px; float: left; background-color: #E1FFCC; }
 body > .center { width: 460px; padding: 0 30px; float: left; }
 body > .right { width: 230px; float: left; }
 
