@@ -77,6 +77,7 @@ function rest_feed(options)
 }
 
 function fb_login() {
+  /* look at fb javascript sdk... */
   var h = 400; var w = 580;
   var left = (screen.width/2)-(w/2);
   var top = (screen.height/2)-(h/2);
