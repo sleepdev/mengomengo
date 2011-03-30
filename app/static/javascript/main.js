@@ -76,3 +76,10 @@ function rest_feed(options)
   this.get();
 }
 
+function fb_login() {
+  var h = 400; var w = 580;
+  var left = (screen.width/2)-(w/2);
+  var top = (screen.height/2)-(h/2);
+  var newwindow = window.open('http://mengomengo.com/facebook_auth',null,'height='+h+',width='+w+', toolbar=0, resizable=0, scrollbars=0, location=0, menubar=0, top='+top+', left='+left);
+  if (window.focus) {newwindow.focus()}
+}
