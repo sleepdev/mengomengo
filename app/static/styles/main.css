@@ -19,7 +19,7 @@ a:hover { text-decoration: underline; }
 
 
 /* Base Styles */
-body { width: 950px; margin: 70px auto 0; font-family: Ubuntu; color: #7FFF24; } 
+body { width: 950px; margin: 70px auto 0; font-family: Ubuntu; color: #333; } 
 
 
 p { padding: 3px 0; }
@@ -44,8 +44,8 @@ div.identity { font-size: 12px; }
 div.identity img { width: 50px; height: 50px; float: left; margin-right: 8px; }
 
 ul.link-list { padding: 7px 0; }
-ul.link-list li { padding: 5px 10px; border-bottom: 1px solid transparent; border-right: 1px solid transparent; cursor: pointer; }
-ul.link-list li:hover { border-bottom: 1px solid #7FFF24; border-right: 1px solid #7FFF24; }
+ul.link-list li { padding: 5px 10px; cursor: pointer; }
+ul.link-list li:hover { background-color: #7FFF24; }
 ul.link-list li.active { background-color: #e1ffcc; }
 ul.link-list li a { height: 100%; width: 100%; display: block; }
 ul.link-list li a:hover { text-decoration: none; }
