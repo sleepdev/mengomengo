@@ -21,6 +21,18 @@ a:hover { text-decoration: underline; }
 /* Base Styles */
 body { font-family: Ubuntu; color: #333; } 
 
+button { 
+  -moz-border-radius:5px 5px 5px 5px;
+  -moz-box-shadow:1px 1px 0 #78D3FF inset, 1px 1px 0 #003265;
+  background:-moz-linear-gradient(center top , #2484C7 0pt, #0072B5 100%) repeat scroll 0 0 transparent;
+  color:#CDE2F4;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:0;
+  padding:5px 10px;
+  text-decoration:none;
+  text-shadow:0 -1px #16558B;
+}
 p { padding: 3px 0; }
 
 input {
@@ -69,9 +81,9 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 #landing .left img { display: block; margin: 0 auto; border: 25px solid #7FFF24; rounded-corner: 5px; }
 #landing .right img { display: table; margin: 0 auto; }
 
-#feed { width: 950px; margin: 50px auto 0; }
-#feed > .left { float: left; width: 630px; }
-#feed > .right { float: right; width: 270px; background-color: #E1FFCC; }
-#feed > .right li { height: 300px; width: 250px; margin: 10px; background-color: #333; text-align: center; line-height: 300px; }
+#wall { width: 950px; margin: 50px auto 0; }
+#wall > .left { float: left; width: 630px; }
+#wall > .right { float: right; width: 270px; background-color: #E1FFCC; }
+#wall > .right li { height: 300px; width: 250px; margin: 10px; background-color: #333; text-align: center; line-height: 300px; }
 
 
