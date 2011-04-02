@@ -30,7 +30,7 @@ class index( BaseRequestHandler ):
             self.render("connect.html")
 
 class player( BaseRequestHandler ):
-    @authenticated
+    @tornado.web.authenticated
     def get( self ):
         self.get_argument("")
         self.render("player.html")
