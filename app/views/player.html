@@ -18,18 +18,11 @@
       <tr>
         <td>
           {% try %}
-          <img id="prev" src="{{ static_url(prev["img"]) }}"/>
-          {% except %}
-          <img id="prev" src="{{ static_url("images/proposes.jpg") }}"/>
-          {% end %}
+          <img id="prev" src="{% try %}{{ static_url(prev["img"]) }}{% except %}{{ static_url("images/proposes.jpg") }}{% end %}"/>
         </td>
         <td></td>
         <td>
-          {% try %}
-          <img id="next" src="{{ static_url(next["img"]) }}"/>
-          {% except %}
-          <img id="next" src="{{ static_url("images/proposes.jpg") }}"/>
-          {% end %}
+          <img id="next" src="{% try %}{{ static_url(prev["img"]) }}{% except %}{{ static_url("images/proposes.jpg") }}{% end %}"/>
         </td>
       </tr>
       <tr>
