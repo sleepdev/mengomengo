@@ -86,6 +86,7 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 
 #wall { width: 950px; margin: 50px auto 0; }
 #wall > .left { float: left; width: 630px; }
+#wall > .left > div { padding-bottom: 10px; }
 #wall > .left > div h2 { float: left; }
 #wall > .left > div button { float: right; }
 #wall .list li { margin: 10px 0; padding: 5px 10px; border: #000; background-color: #0F0; }
