@@ -108,3 +108,5 @@ function fb_login() {
   var newwindow = window.open('http://mengomengo.com/facebook_auth',null,'height='+h+',width='+w+', toolbar=0, resizable=0, scrollbars=0, location=0, menubar=0, top='+top+', left='+left);
   if (window.focus) {newwindow.focus()}
 }
+
+$('.toggle').click( function(){ this.toggle() } );
