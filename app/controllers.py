@@ -30,8 +30,17 @@ class index( BaseRequestHandler ):
             self.render("connect.html")
 
 class player( BaseRequestHandler ):
+    @authenticated
     def get( self ):
+        self.get_argument("")
         self.render("player.html")
+
+
+
+
+
+
+
 
 
 class api_wall( BaseRequestHandler ):

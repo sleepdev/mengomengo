@@ -12,6 +12,7 @@ settings = dict(
    cookie_secret  =  "DFT&GY*UHJ76879u0i&^%*TY&(H*U)J&^T*GY&HU(F&T",
    static_path    = os.path.join(os.path.dirname(__file__), "static"),
    template_path  = os.path.join(os.path.dirname(__file__), "views"),
+   login_url      = '/',
 )
 
 application = tornado.web.Application( [

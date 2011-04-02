@@ -1,35 +1,35 @@
 {% extends "base.html" %}
 
 {% block pre %}
-  {% set title = 'Itazura Na Kiss (Episode 23, Part 2)' %}
-{% end %}
-
-{% block javascript %}
-  {% if False %}
-  $('#player').click(function(){
-    play({{video}})
-  })
-  {% end %}
+  {% set title = '%s (%)' % (video['group'],video['order']) %}
 {% end %}
 
 {% block body %}
   {% include "_navbar.html" %}
   <div id="player-page">
-    <h1>{{ 'Naoki proposes!' }}<br/><fb:like></fb:like></h1>
+    <h1>{{ video["title"] }}<br/><fb:like></fb:like></h1>
     <table>
       <tr>
         <td></td>
         <td>
-          <img id="play" src="{{ static_url("images/play.png") }}"/>
+          <img id="play" src="{{ static_url(video["img"]) }}"/>
         </td>
       </tr>
       <tr>
         <td>
-          <img id="prev" src="{{ static_url("images/play.png") }}"/>
+          {% try %}
+          <img id="prev" src="{{ static_url(prev["img"]) }}"/>
+          {% except %}
+          <img id="prev" src="{{ static_url("/images/no_video.png") }}"/>
+          {% end %}
         </td>
         <td></td>
         <td>
-          <img id="next" src="{{ static_url("images/play.png") }}"/>
+          {% try %}
+          <img id="next" src="{{ static_url(next["img"]) }}"/>
+          {% except %}
+          <img id="next" src="{{ static_url("/images/no_video.png") }}"/>
+          {% end %}
         </td>
       </tr>
       <tr>
