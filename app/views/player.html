@@ -1,5 +1,7 @@
-{% set title = 'title of the page' %}
 {% extends "base.html" %}
+{% block pre %}
+  {% set title = 'title of the page' %}
+{% end %}
 {% block body %}
   {% include "_navbar.html" %}
   <div id="player-page">
