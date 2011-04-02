@@ -51,8 +51,9 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 /* Page Styles */
 #navbar { padding-top: 20px; background-color: #FBB829; color: #FFF; text-align: right; }
 #navbar div { width: 950px; margin: 0px auto; background-color: #7FFF24; }
-#navbar span { float: left; }
-#navbar a { padding: 0.5em 1em; border: 1px solid #FFF; }
+#navbar span { float: left; margin-left: 2em; }
+#navbar a { padding: 0.5em 1em; color: #FFF; border: 1px solid #FFF; }
+#navbar a:hover { background-color: #FBB829; text-decoration: none; }
 
 #player-page { width: 950px; margin: 0px auto; }
 #player-page h1 { margin: 1em 75px; font-size: 30px; color: #FBB829; }
