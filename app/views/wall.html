@@ -2,11 +2,19 @@
 {% block body %}
   {% include "_navbar.html" %}
 
-<div id="feed">
+<div id="wall">
 
-  <div class="left">
-    <input type="text" value="Share a list" size="30"/>
-    <ul class="list"></ul>
+  <div class="left feed">
+    <button type="submit"/>Upload a Video</button>
+    <ul class="list">
+      {% for video in [ {'group':'Naruto', 'order':'Episode 22', 'title':'Fight to the death!', 'img':'x' }, {'group':'iJustine', 'order':'Episode 67', 'title':'Why am I glowing?', 'img':'x'} ] %}
+        <li>
+          <img src='{{ video['img'] }}'/>
+          <p>{{ video['group'] }} ({{ video['order'] }})</p>
+          <p>{{ video['title'] }}</p>
+        </li>
+      {% end %}
+    </ul>
   </div>
 
   <ul class="right">
