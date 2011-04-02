@@ -24,7 +24,7 @@ body { font-family: Ubuntu; color: #333; }
 button { 
   -moz-border-radius:5px 5px 5px 5px;
   -moz-box-shadow:1px 1px 0 #E1FFCC inset, 1px 1px 0 #336633;
-  background:-moz-linear-gradient(center top #E1FFCC,  0pt, #E1FFCC 100%) repeat scroll 0 0 transparent;
+  background-color: #E1FFCC;
   color:#363;
   font-size:14px;
   font-weight:600;
