@@ -71,6 +71,6 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 #feed { width: 950px; margin: 50px auto 0; }
 #feed > .center { float: left; width: 600px; padding: 0 20px; }
 #feed > .right { float: left; width: 310px; background-color: #E1FFCC; }
-
+#feed > .right li { height: 300px; width: 310px; background-color: #333; text-align: center; line-height: 300px; }
 
 
