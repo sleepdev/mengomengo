@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% set title = 'Title of the page' %}
 {% block body %}
-  <div id="player"></div>
+  {% include "_navbar.html" %}
+  <div id="player-page">
+    <div class="">
+    <div id="player"></div>
+  </div>
 {% end %}
