@@ -69,9 +69,8 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 #landing .right img { display: table; margin: 0 auto; }
 
 #feed { width: 950px; margin: 50px auto 0; }
-#feed > .left { width: 173px; float: left; background-color: #E1FFCC; padding: 20px 7px 20px 20px; }
-#feed > .center { width: 460px; padding: 0 30px; float: left; }
-#feed > .right { width: 230px; float: left; }
+#feed > .center { float: left; width: 600px; padding: 0 20px; }
+#feed > .right { float: left; width: 310px; background-color: #E1FFCC; }
 
 
 
