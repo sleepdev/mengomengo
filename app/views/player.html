@@ -1,28 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en" lang="en">
-
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>MengoMengo: Social TV</title>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="{{ static_url('styles/main.css') }}"/>
-  </head>
-
-  <body>
-    <div id="player"></div>
-
-    <div id="fb-root"></div>
-    <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
-    <script src="{{ static_url("javascript/main.js") }}"></script>
-    <script type="text/javascript">
-      FB.init({
-        appId  : '204128796282802',
-        status : true, // check login status
-        cookie : true, // enable cookies to allow the server to access the session
-        xfbml  : true  // parse XFBML
-      });
-    </script>
-
-  </body>
-</html>
-
+{% extends "base.html" %}
+{% block body %}
+  <div id="player"></div>
+{% end %}

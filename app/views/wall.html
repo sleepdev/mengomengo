@@ -1,49 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en" lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-      <title>MengoMengo: Social TV</title>
-      <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
-      <link rel="stylesheet" type="text/css" href="{{ static_url('styles/main.css') }}"/>
-  </head>
-  <body id="feed">
-    <div class="left">
-        <div class="identity clearfix">
-          <img src="{{ static_url('images/frog1.jpg') }}"/>
-          <p class="name">Andrew Johnson</p>
-          <p class="link"><a href>Facebook Profile</a></p>
-        </div>
-        <ul class="link-list">
-          <li class="active"><a href>Status</a></li>
-          <li><a href>Friends</a></li>
-          <li><a href>Subscriptions</a></li>
-          <li><a href>Playlists</a></li>
-        </ul>
+{% block body %}
+<div id="feed">
+
+  <div class="left">
+    <div class="identity clearfix">
+      <img src="{{ static_url('images/frog1.jpg') }}"/>
+      <p class="name">Andrew Johnson</p>
+      <p class="link"><a href>Facebook Profile</a></p>
     </div>
+    <ul class="link-list">
+      <li class="active"><a href>Status</a></li>
+      <li><a href>Friends</a></li>
+      <li><a href>Subscriptions</a></li>
+      <li><a href>Playlists</a></li>
+    </ul>
+  </div>
 
-    <div id="feed" class="center">
-      <input type="text" size="30" value="Share a link"/>
-      <ul class="list"></ul>
-    </div>
+  <div id="feed" class="center">
+    <input type="text" size="30" value="Share a link"/>
+    <ul class="list"></ul>
+  </div>
 
-    <div class="right">
-      <a href="#" onclick="logout()">Logout</a>
-    </div>
+  <div class="right">
+    <a href="#" onclick="logout()">Logout</a>
+  </div>
 
-    <div id="fb-root"></div>
-    <script src="http://connect.facebook.net/en_US/all.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-    <script src="{{ static_url("javascript/main.js") }}"></script>
-    <script>
-      FB.init({
-        appId  : '204128796282802',
-        status : true, // check login status
-        cookie : true, // enable cookies to allow the server to access the session
-        xfbml  : true  // parse XFBML
-      });
-
-      rest_feed({ url: "/api/wall" });
-    </script>
-
-  </body>
-</html>
+</div>
+{% end %}
+{% block javascript %}
+  rest_feed({ url: "/api/wall" });
+{% end %}
