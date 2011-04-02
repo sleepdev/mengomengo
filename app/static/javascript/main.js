@@ -1,9 +1,12 @@
 function login()
 {
-  FB.login(function(response) {
-    if (response.session)
-      document.location = "/";
-  });
+  if( typeof FB == 'undefined' )
+    document.location = "/login";
+  else
+    FB.login(function(response) {
+      if (response.session)
+        document.location = "/";
+    });
 }
 function logout()
 {

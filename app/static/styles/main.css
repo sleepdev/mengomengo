@@ -62,7 +62,7 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
   width: 100px; margin: 0 50px; position: relative; top: -50px; 
 }
 
-#landing { width: 950px; margin: 0 auto; }
+#landing { display: table; width: 950px; margin: 0 auto; }
 #landing h1 { padding: 50px 0; text-align: center; font-weight: bold; font-size: 90px; color: #FBB829; }
 #landing h2 { text-align: center; padding: 30px 32px 40px; font-weight: bold; font-size: 40px; color: #7FFF24; }
 #landing .left, #landing .right { width: 475px; float: left; }
