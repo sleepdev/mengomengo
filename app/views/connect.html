@@ -8,15 +8,14 @@
     <link rel="stylesheet" type="text/css" href="{{ static_url('styles/main.css') }}"/>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="http://connect.facebook.net/en_US/all.js"></script>
     <script src="{{ static_url("javascript/main.js") }}"></script>
     <script>
-      $.getScript('http://connect.facebook.net/en_US/all.js',function(){
-        FB.init({
-          appId  : '204128796282802',
-          status : true, // check login status
-          cookie : true, // enable cookies to allow the server to access the session
-          xfbml  : true  // parse XFBML
-        });
+      FB.init({
+        appId  : '204128796282802',
+        status : true, // check login status
+        cookie : true, // enable cookies to allow the server to access the session
+        xfbml  : true  // parse XFBML
       });
     </script>
 
