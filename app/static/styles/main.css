@@ -101,6 +101,7 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
   text-decoration:none;
 }
 #wall .list li img { height: 50px; width: 50px; float: left; padding-right: 10px; }
+#wall .list li h2 { float: right; color: #333; }
 #wall > .right { float: right; width: 270px; background-color: #E1FFCC; }
 #wall > .right li { height: 300px; width: 250px; margin: 10px; background-color: #333; text-align: center; line-height: 300px; }
 
