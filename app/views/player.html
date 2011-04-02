@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block pre %}
-  {% set title = 'title of the page' %}
+  {% set title = 'Itazura Na Kiss' %}
 {% end %}
 
-{% javascript %}
+{% block javascript %}
   {% if False %}
   $('#player').click(function(){
     play({{video}})
@@ -14,14 +14,24 @@
 
 {% block body %}
   {% include "_navbar.html" %}
-  <h1>{{ video['title'] if False else 'TODO: put video object into  }}</h1>
-  <div class="player-box">
-    <a href="#">
-      <img class="prev" src="/asdf"/>
-    </a>
-    <div id="player"></div>
-    <a href="#">
-      <img class="next" src="/asdf"/>
-    </a>
+  <div id="player-page">
+    <h1>{{ 'Naoki proposes!' }}</h1>
+    <table>
+      <tr>
+        <td></td>
+        <td>
+          <img id="play" src="{{ static_url("/images/play.png") }}"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img id="prev" src="{{ static_url("/images/play.png") }}"/>
+        </td>
+        <td></td>
+        <td>
+          <img id="next" src="{{ static_url("/images/play.png") }}"/>
+        </td>
+      </tr>
+    </table>
   </div>
 {% end %}
