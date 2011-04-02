@@ -36,7 +36,8 @@ class player( BaseRequestHandler ):
         self.render("player.html", video={
             'group':'Itazura na Kiss', 
             'order':'Episode 65, part 2', 
-            'title':'Naoki proposes!'
+            'title':'Naoki proposes!',
+            'img':'images/proposes.jpg'
         } )
 
 
