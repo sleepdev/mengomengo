@@ -35,6 +35,9 @@ button {
 }
 p { padding: 3px 0; }
 
+h1 { font-size: 30px; font-weight: bold; }
+h2 { font-size: 20px; font-weight: bold; }
+
 input {
   width: 100%; 
   color: #FBB829;
@@ -68,7 +71,7 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 #navbar a:hover { background-color: #7FFF24; text-decoration: none; }
 
 #player-page { width: 950px; margin: 0px auto; }
-#player-page h1 { margin: 1em 75px; font-size: 30px; color: #FBB829; }
+#player-page h1 { margin: 1em 75px; color: #FBB829; }
 #player-page #play { width: 550px; height: 320px; }
 #player-page #prev, #player-page #next { 
   width: 100px; margin: 0 50px; position: relative; top: -50px; 
@@ -83,10 +86,10 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 
 #wall { width: 950px; margin: 50px auto 0; }
 #wall > .left { float: left; width: 630px; }
-#wall > .left > div .h2 { float: left; }
+#wall > .left > div h2 { float: left; }
 #wall > .left > div button { float: right; }
 #wall .list li { margin: 10px 0; padding: 5px 10px; border: #000; background-color: #0F0; }
-#wall .list li img { height: 50px; width: 50px; float: left; }
+#wall .list li img { height: 50px; width: 50px; float: left; padding-right: 10px; }
 #wall > .right { float: right; width: 270px; background-color: #E1FFCC; }
 #wall > .right li { height: 300px; width: 250px; margin: 10px; background-color: #333; text-align: center; line-height: 300px; }
 
