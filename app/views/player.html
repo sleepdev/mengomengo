@@ -15,7 +15,7 @@
 {% block body %}
   {% include "_navbar.html" %}
   <div id="player-page">
-    <h1>{{ 'Naoki proposes!' }}</h1>
+    <h1>{{ 'Naoki proposes!' }}<br/><fb:like></fb:like></h1>
     <table>
       <tr>
         <td></td>
@@ -27,7 +27,9 @@
         <td>
           <img id="prev" src="{{ static_url("images/play.png") }}"/>
         </td>
-        <td></td>
+        <td>
+          <fb:comments url="{{request.uri}}" width="550px" height="600px" simple="1" css="http://www.hsiet.com/winery/style.css"></fb:comments>
+        </td>
         <td>
           <img id="next" src="{{ static_url("images/play.png") }}"/>
         </td>
