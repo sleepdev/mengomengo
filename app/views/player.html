@@ -17,7 +17,6 @@
       </tr>
       <tr>
         <td>
-          {% try %}
           <img id="prev" src="{% try %}{{ static_url(prev["img"]) }}{% except %}{{ static_url("images/proposes.jpg") }}{% end %}"/>
         </td>
         <td></td>
