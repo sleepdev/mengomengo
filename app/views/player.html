@@ -1,11 +1,27 @@
 {% extends "base.html" %}
+
 {% block pre %}
   {% set title = 'title of the page' %}
 {% end %}
+
+{% javascript %}
+  {% if False %}
+  $('#player').click(function(){
+    play({{video}})
+  })
+  {% end %}
+{% end %}
+
 {% block body %}
   {% include "_navbar.html" %}
-  <div id="player-page">
-    <div class="">
+  <h1>{{ video['title'] if False else 'TODO: put video object into  }}</h1>
+  <div class="player-box">
+    <a href="#">
+      <img class="prev" src="/asdf"/>
+    </a>
     <div id="player"></div>
+    <a href="#">
+      <img class="next" src="/asdf"/>
+    </a>
   </div>
 {% end %}

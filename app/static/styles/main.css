@@ -19,8 +19,7 @@ a:hover { text-decoration: underline; }
 
 
 /* Base Styles */
-body { width: 950px; margin: 70px auto 0; font-family: Ubuntu; color: #333; } 
-
+body { font-family: Ubuntu; color: #333; } 
 
 p { padding: 3px 0; }
 
@@ -36,10 +35,6 @@ input:focus { outline: 5px auto #e1ffcc; }
 
 
 /* Component Styles */
-#feed > .left { width: 173px; float: left; background-color: #E1FFCC; padding: 20px 7px 20px 20px; }
-#feed > .center { width: 460px; padding: 0 30px; float: left; }
-#feed > .right { width: 230px; float: left; }
-
 div.identity { font-size: 12px; }
 div.identity img { width: 50px; height: 50px; float: left; margin-right: 8px; }
 
@@ -54,12 +49,27 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 
 
 /* Page Styles */
+#navbar { padding-top: 20px; background-color: #FBB829; color: #FFF; text-align: right; }
+#navbar div { width: 950px; margin: 0px auto; background-color: #7FFF24; }
+#navbar span { float: left; }
+#navbar a { padding: 0.5em 1em; border: 1px solid #FFF; }
+
+#player-page { width: 950px; margin: 0px auto; }
+#player-page h1 { margin: 2em 75px; font-size: 30px; color: #FBB829; }
+#player-page #play { width: 550px; }
+#player-page #prev, #player-page #next { 
+  width: 100px; margin: -50px 50px 0; 
+}
 
 #landing h1 { padding: 50px 0; text-align: center; font-weight: bold; font-size: 90px; color: #FBB829; }
 #landing h2 { text-align: center; padding: 30px 32px 40px; font-weight: bold; font-size: 40px; color: #7FFF24; }
 #landing .left, #landing .right { width: 475px; float: left; }
 #landing .left img { display: block; margin: 0 auto; border: 25px solid #7FFF24; rounded-corner: 5px; }
 #landing .right img { display: table; margin: 0 auto; }
+
+#feed > .left { width: 173px; float: left; background-color: #E1FFCC; padding: 20px 7px 20px 20px; }
+#feed > .center { width: 460px; padding: 0 30px; float: left; }
+#feed > .right { width: 230px; float: left; }
 
 
 
