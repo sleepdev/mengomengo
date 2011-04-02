@@ -29,6 +29,9 @@ class index( BaseRequestHandler ):
         else:
             self.render("connect.html")
 
+class player( BaseRequestHandler ):
+    def get( self ):
+        self.render("player.html")
 
 
 class api_wall( BaseRequestHandler ):

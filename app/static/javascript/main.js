@@ -12,6 +12,30 @@ function logout()
   })
 }
 
+function play(options)
+{
+  var service = options['service'] || 'youtube';
+  var video_id = options['video_id'];
+  if( service == 'youtube' )
+  {
+    var template = '<object width="425" height="344">'+
+      '<param name="movie" value="http://www.youtube.com/v/{video_id}?fs=1"</param>'+
+      '<param name="allowFullScreen" value="true"></param>'+
+      '<param name="allowScriptAccess" value="always"></param>'+
+      '<embed src="http://www.youtube.com/v/{video_id}?fs=1" '+
+        'type="application/x-shockwave-flash" '+
+        'allowfullscreen="true" '+
+        'allowscriptaccess="always" '+
+        'width="425" height="344">'+
+      '</embed>'+
+    '</object>';
+    template = template.replace('{video_id}',video_id);
+    $('#player').html( template );
+  } else {
+    alert('unrecognized video-hosting service: '+service');
+  }
+}
+
 /* sets up a facebook/twitter style get/post/del data feed */
 function rest_feed(options)
 {
