@@ -32,8 +32,12 @@ class index( BaseRequestHandler ):
 class player( BaseRequestHandler ):
     @tornado.web.authenticated
     def get( self ):
-        self.get_argument("")
-        self.render("player.html")
+        v = self.get_argument("v")
+        self.render("player.html", video={
+            'group':'Itazura na Kiss', 
+            'order':'Episode 65, part 2', 
+            'title':'Naoki proposes!'
+        } )
 
 
 
