@@ -15,20 +15,11 @@
     {% block body %}{% end %}
 
     <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({appId: '204128796282802', status: true, cookie: true, xfbml: true});
-      };
-      (function() {
-        var e = document.createElement('script'); e.async = true;
-        e.src = document.location.protocol +
-          '//connect.facebook.net/en_US/all.js';
-        document.getElementById('fb-root').appendChild(e);
-      }());
-    </script>
+    <script src="#appId=204128796282802&amp;xfbml=1"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script src="{{ static_url("javascript/main.js") }}"></script>
     <script>
+      FB.init({appId: '204128796282802', status: true, cookie: true, xfbml: true});
       {% block javascript %}{% end %}
     </script>
 
