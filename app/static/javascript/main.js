@@ -32,7 +32,7 @@ function play(options)
     template = template.replace('{video_id}',video_id);
     $('#player').html( template );
   } else {
-    alert('unrecognized video-hosting service: '+service');
+    alert('unrecognized video-hosting service: '+service);
   }
 }
 
