@@ -12,11 +12,27 @@
       <tr>
         <td></td>
         <td>
-          <div id="vtype" style="display: none">{{ video['type'] }}</div>
-          <div id="vdata" style="display: none">{{ video['data'] }}</div>
-          <div id="player">
-            <img onclick="play()" src="{{ video["img"] }}"/>
-          </div>
+          {% if video['type'] == 'youtube' %}
+            <object width="550" height="308">
+              <param name="movie" value="http://www.youtube.com/v/{{ video['data'] }}?fs=1"</param>
+              <param name="allowFullScreen" value="true"></param>
+              <param name="allowScriptAccess" value="always"></param>
+              <embed src="http://www.youtube.com/v/{{ video['data'] }}?fs=1"
+                type="application/x-shockwave-flash"
+                allowfullscreen="true"
+                allowscriptaccess="always"
+                width="550" height="308">
+              </embed>
+            </object>
+          {% elif video['type'] == 'facebook' %}
+            <object width="550" height="308">
+              <param name="allowfullscreen" value="true" />
+              <param name="movie" value="http://www.facebook.com/v/{{ video['data'] }}" />
+              <embed src="http://www.facebook.com/v/{{ video['data'] }}" type="application/x-shockwave-flash"
+                allowfullscreen="true" width="550" height="308">
+              </embed>
+            </object>
+          {% end %}
         </td>
       </tr>
       <tr>
