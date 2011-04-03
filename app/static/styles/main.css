@@ -74,6 +74,7 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 #player-page .left, #player-page .right { display: block; width: 150px; }
 #player-page .left button { float: right; margin-right: 50px; }
 #player-page .right button { float: left; margin-left: 50px; }
+#player-page table { margin-top: 30px; }
 #player-page table .fb_iframe_widget { margin-top: 50px; }
 
 #landing { display: table; width: 950px; margin: 0 auto; }
