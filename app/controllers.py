@@ -38,7 +38,7 @@ class player( BaseRequestHandler ):
         prev = None
         next = None
         found = False
-        for v in db.get("select id from video where list=%s",video.list_id):
+        for v in db.query("select id from video where list=%s",video.list_id):
             if found: next = v.id; break
             if v.id == video.video_id: found = True
             else: prev = v.id
