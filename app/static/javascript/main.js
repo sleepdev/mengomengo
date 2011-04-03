@@ -32,16 +32,16 @@ function play()
         'width="425" height="344">'+
       '</embed>'+
     '</object>';
-  } else {
+  } else if( vtype='facebook' ) {
     var template = '<object width="550" height="308">'+
         '<param name="allowfullscreen" value="true" />'+
         '<param name="movie" value="http://www.facebook.com/v/{vdata}" />'+
         '<embed src="http://www.facebook.com/v/{vdata}" type="application/x-shockwave-flash" '+ 
           'allowfullscreen="true" width="400" height="224">'+
         '</embed>'+
-      '</object>'
+      '</object>';
   } else {
-    alert('unrecognized video-hosting service: '+service);
+    alert('unrecognized video-hosting service: '+vtype);
   }
   template = template.replace('{vdata}',vdata);
   $('#player').html( template );
