@@ -33,10 +33,15 @@ class player( BaseRequestHandler ):
     @tornado.web.authenticated
     def get( self ):
         v = self.get_argument("v")
-        video = db.get("select list.title as list, video.title as title,type,data from video,list where video.list=list.id and video.id=%s", v) 
-        #video = db.get("select (list.title as list, video.title as title, type, data) from video,list where video.list=list.id and video.id=%s", v)
+        video = db.get("select list.title as list, list.id as list_id, vvideo.title as title, video.id as video_id, type,data "
+                       "from video,list where video.list=list.id and video.id=%s", v)
         prev = None
         next = None
+        found = False
+        for v in db.get("select id from video where list=list.id",video.list_id):
+            if found: next = v.id; break
+            if v.id == video.video_id: found = True
+            else: prev = v.id
         self.render("player.html", video=video, prev=prev, next=next)
 
 
