@@ -10,7 +10,11 @@
     <h1>{{ video["title"] }}<br/><fb:like></fb:like></h1>
     <table>
       <tr>
-        <td class="left">{% if prev != None %}<a href="/player?v={{prev}}"><button>Previous</button></a>{% end %}</td>
+        <td >
+          {% if prev != None %}
+          <div class="left"><a href="/player?v={{prev}}"><button>Previous</button></a></div>
+          {% end %}
+        </td>
         <td>
           {% if video['type'] == 'youtube' %}
             <object width="550" height="308">
@@ -34,7 +38,11 @@
             </object>
           {% end %}
         </td>
-        <td class="right">{% if next != None %}<a href="/player?v={{next}}"><button>Next</button></a>{% end %}</td>
+        <td>
+          {% if next != None %}
+          <div class="right"><a href="/player?v={{next}}"><button>Next</button></a></div>
+          {% end %}
+        </td>
       </tr>
       <tr>
         <td></td>
