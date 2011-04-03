@@ -14,16 +14,16 @@
         <td>
           <div id="vtype" style="display: none">{{ video['type'] }}</div>
           <div id="vdata" style="display: none">{{ video['data'] }}</div>
-          <img id="play" onclick="play" src="{{ static_url(video["img"]) }}"/>
+          <img id="play" onclick="play" src="{{ video["img"] }}"/>
         </td>
       </tr>
       <tr>
         <td>
-          <img id="prev" src="{% try %}{{ static_url(prev["img"]) }}{% except %}{{ static_url("images/proposes.jpg") }}{% end %}"/>
+          <img id="prev" src="{% try %}{{ prev["img"] }}{% except %}{{ static_url("images/proposes.jpg") }}{% end %}"/>
         </td>
         <td></td>
         <td>
-          <img id="next" src="{% try %}{{ static_url(prev["img"]) }}{% except %}{{ static_url("images/proposes.jpg") }}{% end %}"/>
+          <img id="next" src="{% try %}{{ prev["img"] }}{% except %}{{ static_url("images/proposes.jpg") }}{% end %}"/>
         </td>
       </tr>
       <tr>
