@@ -17,8 +17,9 @@ function logout()
 
 $('.toggle').click( function(){ 
   if( $(this).hasClass('clicked') ) {
-    $(this).removeClass('clicked');
+    $('.clicked').removeClass('clicked');
   } else {
+    $('.clicked').removeClass('clicked');
     $(this).addClass('clicked');
   }
 })
