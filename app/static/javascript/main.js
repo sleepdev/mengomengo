@@ -43,7 +43,8 @@ function play()
   } else {
     alert('unrecognized video-hosting service: '+vtype);
   }
-  template = template.replace('{vdata}',vdata);
+  while( template.indexOf('{vdata}') != -1 )
+    template = template.replace('{vdata}',vdata);
   $('#player').html( template );
 }
 
