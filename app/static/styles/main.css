@@ -19,7 +19,7 @@ a:hover { text-decoration: underline; }
 
 
 /* Base Styles */
-body { font-family: Ubuntu; color: #333; } 
+body { font-family: Ubuntu, Arial; color: #333; } 
 
 button { 
   -moz-border-radius:5px 5px 5px 5px;
