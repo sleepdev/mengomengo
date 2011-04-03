@@ -38,8 +38,8 @@ class player( BaseRequestHandler ):
             'order':'Episode 65, part 2', 
             'title':'Naoki proposes!',
             'img':'http://vthumb.ak.fbcdn.net/vthumb-ak-ash1/v10817/41/56/4702676/t4702676_614004947048_1262.jpg',
-            'type':'facebook',
-            'data':'614004947048'
+            'type':'youtube',
+            'data':'kMSFkGYdooo'
         } )
 
 
