@@ -93,7 +93,7 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 
 #landing { display: table; width: 950px; margin: 0 auto; }
 #landing h1 { padding: 50px 0; text-align: center; font-weight: bold; font-size: 90px; color: #FBB829; }
-#landing h2 { text-align: center; padding: 30px 32px 40px; font-weight: bold; font-size: 40px; color: #7FFF24; }
+#landing h2 { text-align: center; padding: 40px 32px; font-weight: bold; font-size: 40px; color: #7FFF24; }
 #landing .left, #landing .right { width: 475px; float: left; }
 #landing .left img { display: block; margin: 0 auto; border: 25px solid #7FFF24; rounded-corner: 5px; }
 #landing .right img { display: table; margin: 0 auto; }
