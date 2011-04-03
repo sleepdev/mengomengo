@@ -14,7 +14,9 @@
         <td>
           <div id="vtype" style="display: none">{{ video['type'] }}</div>
           <div id="vdata" style="display: none">{{ video['data'] }}</div>
-          <img id="player" onclick="play()" src="{{ video["img"] }}"/>
+          <div id="player">
+            <img onclick="play()" src="{{ video["img"] }}"/>
+          </div>
         </td>
       </tr>
       <tr>
