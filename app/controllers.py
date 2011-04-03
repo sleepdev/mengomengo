@@ -33,14 +33,17 @@ class player( BaseRequestHandler ):
     @tornado.web.authenticated
     def get( self ):
         v = self.get_argument("v")
-        self.render("player.html", video={
+        self.render("player.html", 
+         video={
             'group':'Itazura na Kiss', 
             'order':'Episode 65, part 2', 
             'title':'Naoki proposes!',
-            'img':'http://vthumb.ak.fbcdn.net/vthumb-ak-ash1/v10817/41/56/4702676/t4702676_614004947048_1262.jpg',
             'type':'youtube',
             'data':'kMSFkGYdooo'
-        } )
+          },
+          prev = 1,
+          next = 2 
+        )
 
 
 

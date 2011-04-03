@@ -36,13 +36,9 @@
         </td>
       </tr>
       <tr>
-        <td>
-          <img id="prev" src="{% try %}{{ prev["img"] }}{% except %}{{ static_url("images/proposes.jpg") }}{% end %}"/>
-        </td>
+        <td>{% if prev != None %}<a href="/player?v={{prev}}">Previous</a>{% end %}</td>
         <td></td>
-        <td>
-          <img id="next" src="{% try %}{{ prev["img"] }}{% except %}{{ static_url("images/proposes.jpg") }}{% end %}"/>
-        </td>
+        <td>{% if next != None %}<a href="/player?v={{next}}">Next</a>{% end %}</td>
       </tr>
       <tr>
         <td></td>

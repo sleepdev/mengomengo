@@ -15,77 +15,10 @@ function logout()
   })
 }
 
-/* sets up a facebook/twitter style get/post/del data feed */
-function rest_feed(options)
-{
-  if ( !(this instanceof rest_feed) )
-      return new rest_feed(options);
-
-  var url = options['url'];
-  var feed_api = this;
-  var feed = options['feed'] || $('#feed');
-  var template = options['template'] || '<li>{{text}}</li>';
-  var start = 0;
-  var limit = options['limit'] || 15;
-
-  this.render = function( json ) {
-    /* todo, fix to decide append or prepend order */
-    var html = template;
-    for( var k in json ){
-      html = html.replace('{{'+k+'}}',json[k]);
-    }
-    var dom = $(html);
-    dom.data("rest_data",json);
-    feed.find('.list').append( dom );
-    start = start + 1;
+$('.toggle').click( function(){ 
+  if( $(this).hasClass('clicked') ) {
+    $(this).removeClass('clicked');
+  } else {
+    $(this).addClass('clicked');
   }
-  this.post = function( data ){
-    var form_data = {}; 
-    feed.find('.form [name]').each(function(i){
-      form_data[i.attr('name')] = i.attr('value');
-    });
-    $.ajax({
-      type: 'POST',
-      dataType: 'json',
-      url: url,
-      data: feed.find('.feedform'),
-      success: function( data ){
-        feed_api.render(data);
-      }
-    });    
-  }
-  this.get = function() {
-    $.ajax({
-      type: 'GET', 
-      dataType: 'json', 
-      url: url, 
-      data: {start: start, limit: limit},
-      success: function( json ){
-        $.each( json.data, function(i,v){feed_api.render(v)} );
-        if( json.data.length < limit ) feed.find('.more').hide();
-      }
-    });
-  }
-  this.del = function( ui ){ 
-    $.ajax({
-        type: 'DELETE',
-        url: rest_url,
-        data: ui.data("rest_data")
-    });
-    ui.slideUp();
-  }
-  feed.find('.submit').click(function(){ feed_api.post(); });
-  feed.find('.more').click(function(){ feed_api.get(); });
-  this.get();
-}
-
-function fb_login() {
-  /* look at fb javascript sdk... */
-  var h = 400; var w = 580;
-  var left = (screen.width/2)-(w/2);
-  var top = (screen.height/2)-(h/2);
-  var newwindow = window.open('http://mengomengo.com/facebook_auth',null,'height='+h+',width='+w+', toolbar=0, resizable=0, scrollbars=0, location=0, menubar=0, top='+top+', left='+left);
-  if (window.focus) {newwindow.focus()}
-}
-
-$('.toggle').click( function(){ this.toggle() } );
+})
