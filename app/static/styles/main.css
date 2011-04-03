@@ -69,9 +69,19 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 #navbar > div > a, #navbar .toggle > a { padding: 0.5em 1em; color: #FFF; border: 1px solid #FFF; }
 #navbar > div > a:hover, #navbar .toggle > a:hover, #navbar .clicked > a { background-color: #7FFF24; text-decoration: none; }
 #navbar .toggle { display: inline; }
-#navbar .clicked > a { z-index: 2 }
+#navbar .clicked > a, #navbar.clicked a:hover {
+  background-color:#FBB829;
+  border-bottom:1px solid #FBB829;
+  padding-bottom:2px;
+  position:relative;
+  z-index:2;
+}
 #navbar .dropdown { display: none; float: right; width: 150px; z-index: 1; }
-#navbar .clicked .dropdown { display: block; background-color: #FBB829; padding: 0.5em 1em; color: #FFF; }
+#navbar .clicked .dropdown { display: block; background-color: #FBB829; padding: 0.5em 1em; color: #FFF; 
+  border-top:1px solid #FFFFFF;
+  color:#FFFFFF;
+  position:relative;
+}
 
 #player-page { width: 950px; margin: 0px auto; }
 #player-page h1 { margin: 1em 75px; color: #FBB829; }
