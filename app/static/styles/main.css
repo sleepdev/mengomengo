@@ -66,8 +66,8 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 #navbar { padding-top: 20px; background-color: #FBB829; color: #FFF; text-align: right; }
 #navbar div { width: 950px; margin: 0px auto; background-color: #7FFF24; height: 1.5em; line-height: 1.5em; }
 #navbar span { float: left; margin-left: 2em; }
-#navbar > a, #navbar .toggle > a { padding: 0.5em 1em; color: #FFF; border: 1px solid #FFF; }
-#navbar > a:hover, #navbar .toggle > hover, #navbar .clicked > a { background-color: #7FFF24; text-decoration: none; }
+#navbar > div > a, #navbar .toggle > a { padding: 0.5em 1em; color: #FFF; border: 1px solid #FFF; }
+#navbar > div > a:hover, #navbar .toggle > hover, #navbar .clicked > a { background-color: #7FFF24; text-decoration: none; }
 #navbar .toggle { display: inline; }
 #navbar .dropdown { display: none; float: right; }
 #navbar .clicked .dropdown { display: block; background-color: #FBB829; padding: 0.5em 1em; color: #FFF; }
