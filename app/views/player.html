@@ -12,7 +12,9 @@
       <tr>
         <td></td>
         <td>
-          <img id="play" src="{{ static_url(video["img"]) }}"/>
+          <div id="vtype" style="display: none">{{ video['type'] }}</div>
+          <div id="vdata" style="display: none">{{ video['data'] }}</div>
+          <img id="play" onclick="play" src="{{ static_url(video["img"]) }}"/>
         </td>
       </tr>
       <tr>
