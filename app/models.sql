@@ -7,44 +7,32 @@ CREATE TABLE user (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     fb_id VARBINARY(100) NOT NULL UNIQUE
 );
-CREATE TABLE permission (
-    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user BIGINT NOT NULL,
-    verb ENUM('read','write','delete') NOT NULL,
-    owner BIGINT NOT NULL,
-    object ENUM('wallpost','playlist','subscription','video') NOT NULL,
-    UNIQUE KEY(user,verb,owner,object)
-);
 
-CREATE TABLE wall (
-    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user BIGINT NOT NULL,
-    subject BIGINT NOT NULL,
-    verb VARBINARY(100) NOT NULL,
-    object BIGINT NOT NULL,
-    ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    KEY(user,ts)
-);
 CREATE TABLE list (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user BIGINT NOT NULL,
+    owner BIGINT NOT NULL,
     title VARBINARY(500) NOT NULL,
-    permit ENUM('public','shared','private','explicit') NOT NULL DEFAULT 'shared',
-    KEY(user)
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    KEY(owner)
 );
+
 CREATE TABLE video (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    list BIGINT NOT NULL,
-    url VARBINARY(500) NOT NULL,
     title VARBINARY(500),
+    list BIGINT NOT NULL,
+    type VARBINARY(100) NOT NULL,
+    data VARBINARY(100) NOT NULL,
     episode INT,
     part INT,
-    KEY(list,episode,part)
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    KEY(list,episode,part,created_at)
 );
-CREATE TABLE subscription ( 
+
+CREATE TABLE stalking ( 
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user BIGINT NOT NULL,
-    list BIGINT NOT NULL,
-    KEY(user)
+    stalker BIGINT NOT NULL,
+    victim BIGINT NOT NULL,
+    KEY(stalker),
+    KEY(victim)
 );
 
