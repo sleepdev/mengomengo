@@ -7,7 +7,6 @@
     <meta property="fb:admins" content="100000273342150" />
     <meta property="fb:app_id" content="204128796282802" />
     <title>{{title}}</title>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="{{ static_url('styles/main.css') }}"/>
   </head>
 
@@ -17,9 +16,11 @@
     <div id="fb-root"></div>
     <script src="http://connect.facebook.net/en_US/all.js#appId=204128796282802&amp;xfbml=1"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="{{ static_url("javascript/facebox.js")  }}"></script>
     <script src="{{ static_url("javascript/main.js") }}"></script>
     <script>
       FB.init({appId: '204128796282802', status: true, cookie: true, xfbml: true});
+      jQuery(document).ready(function($) { $('a[rel*=facebox]').facebox() });
       {% block javascript %}{% end %}
     </script>
 
