@@ -1,6 +1,5 @@
-<form id="video-upload" target="upload_target" enctype="multipart/form-data" action="https://api-video.facebook.com/method/video.upload">
+<form id="video-upload" encoding="multipart/form-data" enctype="multipart/form-data" action="https://api-video.facebook.com/method/video.upload">
   <input type="hidden" id="access_token" name="access_token" value=""/>
-  <iframe id="upload_target" name="upload_target" src="" style="display: none"></iframe>
   <table>
     <tr>
       <td><label for="file">Upload a file</label></td>
@@ -22,10 +21,15 @@
     -->
   </table>
 </form>
-
+<button onclick="submit_video()">Submit</button>
 <script> 
   $('#access_token').val( FB.getSession().access_token );
+  /*
   document.getElementById("video-upload").onsubmit=function() {
     document.getElementById("upload_target").onload = function(){ alert('file upload success') };
   }
+  function submit_video()
+  {
+    $('#upload_target')
+  } */
 </script>
