@@ -44,5 +44,8 @@ class player( BaseRequestHandler ):
             else: prev = v.id
         self.render("player.html", video=video, prev=prev, next=next)
 
-
+class upload( BaseRequestHandler ):
+    @tornado.web.authenticated
+    def get( self ):
+        self.render("upload.html")
 
