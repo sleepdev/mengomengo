@@ -5,6 +5,7 @@
   </head>
   <body>
     <form enctype="multipart/form-data">
+      <input type="hidden" id="access_token" name="access_token" value=""/>
       <table>
         <tr>
           <td><label for="file">Upload a file</label></td>
@@ -23,5 +24,10 @@
           <td><input type="submit" value="Upload"/></td>
       </table>
     </form>
+
+    <script src="http://connect.facebook.net/en_US/all.js#appId=204128796282802&amp;xfbml=1"></script>
+    <script>
+      FB.init({appId: '204128796282802', status: true, cookie: true, xfbml: true});
+    </script>
   </body>
 </html>
