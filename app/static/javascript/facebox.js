@@ -185,7 +185,7 @@
 
     $('#facebox .close')
       .click($.facebox.close)
-      .append('<img src="'
+      .html('<img src="'
               + $.facebox.settings.closeImage
               + '" class="close_image" title="close">')
   }
