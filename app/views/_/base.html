@@ -22,8 +22,6 @@
     <script>
       FB.init({appId: '204128796282802', status: true, cookie: true, xfbml: true});
       jQuery(document).ready(function($) { 
-        $.facebox.settings.closeImage = '/static/images/closelabel.png';
-        $.facebox.settings.loadingImage = '/static/images/loading.gif';
         $('a[rel*=facebox]').facebox();
       });
       {% block javascript %}{% end %}
