@@ -1,34 +1,23 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  </head>
-  <body>
-    <form enctype="multipart/form-data">
-      <input type="hidden" id="access_token" name="access_token" value=""/>
-      <table>
-        <tr>
-          <td><label for="file">Upload a file</label></td>
-          <td><input type="file" id="file" name="file" size="30"/>
-        </tr>
-        <tr>
-          <td><label for="title">Title</label></td> 
-          <td><input type"text" id="title" name="title" value=""/></td>
-        </tr>
-        <tr>
-          <td><label for="description">Description</label></td>
-          <td><textbox id="description" name="description"/></textbox></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><input type="submit" value="Upload"/></td>
-      </table>
-    </form>
+<form enctype="multipart/form-data" action="http://api-video.facebook.com/method/video.upload">
+  <input type="hidden" id="access_token" name="access_token" value=""/>
+  <table>
+    <tr>
+      <td><label for="file">Upload a file</label></td>
+      <td><input type="file" id="file" name="file" size="30"/>
+    </tr>
+    <tr>
+      <td><label for="title">Title</label></td> 
+      <td><input type"text" id="title" name="title" value=""/></td>
+    </tr>
+    <tr>
+      <td><label for="description">Description</label></td>
+      <td><textarea id="description" name="description"/></textarea></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Upload"/></td>
+    </tr>
+  </table>
+</form>
 
-    <script src="http://connect.facebook.net/en_US/all.js#appId=204128796282802&amp;xfbml=1"></script>
-    <script>
-      FB.init({appId: '204128796282802', status: true, cookie: true, xfbml: true});
-      $('#access_token').val( FB.getSession().access_token )
-    </script>
-  </body>
-</html>
+<script> $('#access_token').val( FB.getSession().access_token ) </script>
