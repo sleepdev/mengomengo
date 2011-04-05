@@ -1,11 +1,11 @@
-{% extends "base.html" %}
+{% extends "_/base.html" %}
 
 {% block pre %}
   {% set title = video['list'] %}
 {% end %}
 
 {% block body %}
-  {% include "_navbar.html" %}
+  {% include "_/navbar.html" %}
   <div id="player-page">
     <h1>{{ video["title"] }}<br/>
       <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmengomengo.com&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
