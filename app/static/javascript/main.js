@@ -6,7 +6,7 @@ function login()
     FB.login(function(response) {
       if (response.session)
         document.location = "/";
-    });
+    }, {perms: 'video_upload'} );
 }
 function logout()
 {
