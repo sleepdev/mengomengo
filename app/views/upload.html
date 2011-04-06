@@ -10,12 +10,9 @@
     <tr>
       <td><label for="file">Video File</label></td>
       <td>
-        <div id="file_wrapper">
-	  <input type="text" id="filename" value="Choose a file to upload" />
-	  <input type="file" id="file" name="file" />
-        </div>
-
-        <div class="clearfix" style="position: relative;">
+        <div class="clearfix" style="position: relative">
+	  <input style="position: absolute" type="text" id="filename" value="Choose a file to upload" />
+	  <input style="position: absolute; z-index: 2; opacity: 0; cursor: pointer" type="file" id="file" name="file" />
         </div>
       </td>
     </tr>
