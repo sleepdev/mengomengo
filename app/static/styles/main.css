@@ -47,6 +47,7 @@ input {
   border: 1px solid #e1ffcc;
 }
 input:focus { outline: 5px auto #e1ffcc; }
+input[type="file"]:hover { cursor: pointer; }
 
 
 
