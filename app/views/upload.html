@@ -1,7 +1,7 @@
 <form id="video_upload" method="post" encoding="multipart/form-data" enctype="multipart/form-data" 
  action="https://api-video.facebook.com/method/video.upload">
   <input type="hidden" id="access_token" name="access_token" value=""/>
-  <h2>Upload a Video to "News Feed"</h2>
+  <h2>Upload a video to "News Feed"</h2>
   <table>
     <tr>
       <td><label for="title">Video Title</label></td> 
@@ -9,7 +9,12 @@
     </tr>
     <tr>
       <td><label for="file">Video File</label></td>
-      <td><input name="file" id="file" type="file" size="20"/>
+      <td>
+        <div style="position: relative;">
+          <input type="text" size="30" value="Choose a file to upload"/>
+          <input style="z-index: 2; opacity: 0;" name="file" id="file" type="file" size="20"/>
+        </div>
+      </td>
     </tr>
     <tr>
       <td></td>
