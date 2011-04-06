@@ -35,7 +35,7 @@ button {
 p { padding: 3px 0; }
 
 h1 { font-size: 30px; font-weight: bold; }
-h2 { font-size: 20px; font-weight: bold; color: #FBB829; padding-bottom: 15px; }
+h2 { font-size: 20px; font-weight: bold; color: #FBB829; padding: 5px 5px 15px; }
 
 tr { min-height: 2em; line-height: 2.8em; }
 label { display: block; padding: 0 25px 0 15px; }
