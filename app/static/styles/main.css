@@ -84,6 +84,8 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
   position:relative;
 }
 
+#video_upload { width: 500px; }
+
 #player-page { width: 950px; margin: 0px auto; }
 #player-page h1 { margin: 1em 75px 0; color: #FBB829; }
 #player-page h1 iframe { margin-top: 10px; }
