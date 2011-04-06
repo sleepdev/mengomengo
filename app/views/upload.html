@@ -10,9 +10,12 @@
     <tr>
       <td><label for="file">Video File</label></td>
       <td>
+        <div id="file_wrapper">
+	  <input type="text" id="filename" value="Choose a file to upload" />
+	  <input type="file" id="file" name="file" />
+        </div>
+
         <div class="clearfix" style="position: relative;">
-          <input style="position: absolute; cursor: pointer" type="text" size="20" value="Choose a file to upload"/>
-          <input style="position: absolute; cursor: pointer; z-index: 2; opacity: 0;" name="file" id="file" type="file" size="20"/>
         </div>
       </td>
     </tr>
@@ -24,4 +27,7 @@
 </form>
 <script> 
   $('#access_token').val( FB.getSession().access_token );
+  $('input[type=file]').change(function(e){
+    $('#filename').val( $(this).val() );
+  });
 </script>

@@ -47,7 +47,6 @@ input {
   border: 1px solid #e1ffcc;
 }
 input:focus { outline: 5px auto #e1ffcc; }
-input[type="file"]:hover { cursor: pointer; }
 
 
 
@@ -90,6 +89,9 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 #video_upload table { width: 420px; }
 #video_upload label { width: 100px; }
 #video_upload button { margin-bottom:5px; margin-top:15px; float: right; }
+#video_upload #file_wrapper { float: left; position: relative; width: 200px; height: 30px; }
+#video_upload #filename { position: absolute; top: 0; left: 0; }
+#video_upload #file { position: absolute; top: 0; left: 0; z-index: 2; opacity: 0; cursor: pointer;  }
 
 #player-page { width: 950px; margin: 0px auto; }
 #player-page h1 { margin: 1em 75px 0; color: #FBB829; }
