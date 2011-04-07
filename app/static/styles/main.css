@@ -6,8 +6,8 @@ table { border-collapse: separate; border-spacing: 0; }
 caption, th, td { text-align: left; font-weight: normal; }
 
 a { text-decoration: none; }
-a:link { color: #FFF; text-decoration: none; }
-a:visited { color: #FFF; }
+a:link { color: #336633; text-decoration: none; }
+a:visited { color: #336633; }
 a:hover { text-decoration: underline; }
 
 
