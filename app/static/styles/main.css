@@ -85,9 +85,8 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
   position:relative;
 }
 
-#footer { margin-top: 30px; border-top: 1px solid #E1FFCC; text-align: center; }
+#footer { margin-top: 30px; border-top: 1px solid #E1FFCC; text-align: center; line-height: 2em; }
 #footer span { margin: 10px 10px; } 
-#footer a { color: #336633; }
 
 #video_upload { width: 450px; }
 #video_upload table { width: 420px; }
