@@ -19,7 +19,7 @@ a:hover { text-decoration: underline; }
 
 
 /* Base Styles */
-body { font-family: Arial; color: #333; } 
+body { font-family: Arial; color: #336633; } 
 
 button { 
   -moz-border-radius:5px 5px 5px 5px;
@@ -85,8 +85,9 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
   position:relative;
 }
 
-#footer { border-top: 1px solid #E1FFCC; text-align: center; }
+#footer { margin-top: 30px; border-top: 1px solid #E1FFCC; text-align: center; }
 #footer span { margin: 10px 10px; } 
+#footer a { color: #336633; }
 
 #video_upload { width: 450px; }
 #video_upload table { width: 420px; }
@@ -118,7 +119,7 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
   -moz-border-radius:5px 5px 5px 5px;
   -moz-box-shadow:1px 1px 0 #0F0 inset, 1px 1px 0 #080;
   background:-moz-linear-gradient(center top , #7FFF24 0pt, #0F0 100%) repeat scroll 0 0 transparent;
-  color:#333;
+  color: #225522;
   font-size:14px;
   font-weight:600;
   letter-spacing:0;
