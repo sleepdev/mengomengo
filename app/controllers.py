@@ -34,6 +34,10 @@ class lists( BaseRequestHandler ):
         user = self.get_argument("user",self.current_user)
         self.render("lists.html")
 
+class friends( BaseRequestHandler ):
+    def get( self ):
+        self.render("friends.html")
+
 class player( BaseRequestHandler ):
     @tornado.web.authenticated
     def get( self ):
