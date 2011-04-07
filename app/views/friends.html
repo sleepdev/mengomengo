@@ -1,0 +1,28 @@
+{% extends "_/base.html" %}
+{% block body %}
+  {% include "_/navbar.html" %}
+
+<div id="wall" class="clearfix">
+
+  <div class="left feed">
+    <h2>Friends</h2>
+    <ul class="list">
+      {% for video in [ {'img':'x', 'name':'Jessica Ahern'}, {'img':'x', 'name':'Carly Taylor'} ] %}
+        <li>
+          <img src='{{ friend['img'] }}'/>
+          <p>{{ friend['name'] }}</p>
+        </li>
+      {% end %}
+    </ul>
+  </div>
+
+  <ul class="right">
+    <li><iframe src="http://www.facebook.com/plugins/recommendations.php?site=http%3Amengomengo.com&amp;width=250&amp;height=300&amp;header=true&amp;colorscheme=light&amp;font&amp;border_color" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:300px;" allowTransparency="true"></iframe></li>
+    <li>Ads go here</li>
+    <li>Ads go here</li>
+  </ul>
+
+</div>
+
+  {% include "_/footer.html" %}
+{% end %}
