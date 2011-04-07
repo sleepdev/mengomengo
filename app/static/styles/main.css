@@ -85,6 +85,9 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
   position:relative;
 }
 
+#footer { border-top: 1px solid #E1FFCC; text-align: center; }
+#footer span { margin: 10px 10px; } 
+
 #video_upload { width: 450px; }
 #video_upload table { width: 420px; }
 #video_upload label { width: 100px; }
@@ -127,5 +130,4 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 #wall .list li h2 { float: right; color: #333; position: absolute; top: 5px; right: 15px; }
 #wall > .right { float: right; width: 270px; background-color: #E1FFCC; }
 #wall > .right li { height: 300px; width: 250px; margin: 10px; background-color: #FFF; text-align: center; line-height: 300px; }
-
 
