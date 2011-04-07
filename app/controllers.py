@@ -31,6 +31,7 @@ class index( BaseRequestHandler ):
 
 class lists( BaseRequestHandler ):
     def get( self ):
+        user = self.get_argument("user",self.current_user)
         self.render("lists.html")
 
 class player( BaseRequestHandler ):

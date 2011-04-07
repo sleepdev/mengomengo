@@ -17,6 +17,7 @@ settings = dict(
 
 application = tornado.web.Application( [
     ( "/",                          controllers.index            ),
+    ( "/lists",                     controllers.lists            ),
     ( "/player",                    controllers.player           ),
     ( "/upload",                    controllers.upload           ),
 ], **settings )
