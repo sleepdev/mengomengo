@@ -29,6 +29,10 @@ class index( BaseRequestHandler ):
         else:
             self.render("connect.html")
 
+class lists( BaseRequestHandler ):
+    def get( self ):
+        self.render("lists.html")
+
 class player( BaseRequestHandler ):
     @tornado.web.authenticated
     def get( self ):
