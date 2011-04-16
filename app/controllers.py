@@ -11,9 +11,9 @@ db = tornado.database.Connection(
 re_fbid = re.compile("access_token=(?P<pk>[^&]*)")
 class BaseRequestHandler( tornado.web.RequestHandler ):
     def get_current_user( self ):
-        cookie = self.get_cookie("fbs_204128796282802")
-        fbid = self.get_cookie("fbs_204128796282802")        
-	return fbid.groups()[0]        
+        cookie = self.get_cookie("fbs_204128796282802") 
+        fbid = re_fbid.match(cookie)
+        return fbid.groups()[0]
     def has_permission( self, verb, owner, object ):
         authorized = True
         if not authorized:
