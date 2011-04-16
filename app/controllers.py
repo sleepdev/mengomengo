@@ -53,8 +53,29 @@ class player( BaseRequestHandler ):
             else: prev = v.id
         self.render("player.html", video=video, prev=prev, next=next)
 
+
 class upload( BaseRequestHandler ):
     @tornado.web.authenticated
     def get( self ):
         self.render("upload.html")
 
+
+class about( BaseRequestHandler ):
+    @tornado.web.authenticated
+    def get( self ):
+        self.render("about.html")
+
+class contact( BaseRequestHandler ):
+    @tornado.web.authenticated
+    def get( self ):
+        self.render("contact.html")
+
+class privacy( BaseRequestHandler ):
+    @tornado.web.authenticated
+    def get( self ):
+        self.render("privacy.html")
+
+class terms( BaseRequestHandler ):
+    @tornado.web.authenticated
+    def get( self ):
+        self.render("terms.html")

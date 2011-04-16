@@ -16,11 +16,18 @@ settings = dict(
 )
 
 application = tornado.web.Application( [
+
     ( "/",                          controllers.index            ),
     ( "/friends",                   controllers.friends          ),
     ( "/lists",                     controllers.lists            ),
     ( "/player",                    controllers.player           ),
     ( "/upload",                    controllers.upload           ),
+
+    ( "/about",                     controllers.about            ),
+    ( "/contact",                   controllers.contact          ),
+    ( "/privacy",                   controllers.privacy          ),
+    ( "/terms",                     controllers.terms            ),
+
 ], **settings )
 
 
