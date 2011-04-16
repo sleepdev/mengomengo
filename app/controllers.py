@@ -28,7 +28,7 @@ class index( BaseRequestHandler ):
 class lists( BaseRequestHandler ):
     def get( self ):
         user = self.get_argument("user",self.current_user)
-        lists = db.query("select * from lists where owner=%s", self.current_user)
+        lists = db.query("select * from list where owner=%s", self.current_user)
         stalking = db.query("select l.* from stalking as s,list as l where l.id=s.victim and s.stalker=%s")
         self.render("lists.html")
 
