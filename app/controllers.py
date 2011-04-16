@@ -1,14 +1,18 @@
+import re
 import tornado.web
 import tornado.database
+
 
 db = tornado.database.Connection(
     host="localhost", database="mengomengo",
     user="root", password="mengomengo", 
 )
 
+#re_fbid = re.compile()
 class BaseRequestHandler( tornado.web.RequestHandler ):
     def get_current_user( self ):
-	return self.get_cookie("fbs_204128796282802")
+	print self.get_cookie("fbs_204128796282802")
+	return self.get_cookie("fbs_204128796282802")        
     def has_permission( self, verb, owner, object ):
         authorized = True
         if not authorized:
@@ -25,7 +29,11 @@ class BaseRequestHandler( tornado.web.RequestHandler ):
 class index( BaseRequestHandler ):
     def get( self ):
         if self.current_user:
-            self.render("wall.html")
+            news = db.query("select v.* from stalking as s,list as l,video as v "
+                "on s.victim=l.id and l.id=v.list"
+                "where s.stalker=%s "
+                "order by v.created_at", self.current_user)
+            self.render("wall.html", news=news )
         else:
             self.render("connect.html")
 
