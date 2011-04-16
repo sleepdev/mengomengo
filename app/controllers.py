@@ -30,7 +30,7 @@ class lists( BaseRequestHandler ):
         user = self.get_argument("user",self.current_user)
         lists = db.query("select * from list where owner=%s", self.current_user)
         stalking = db.query("select l.* from stalking as s,list as l where l.id=s.victim and s.stalker=%s", self.current_user)
-        self.render("lists.html")
+        self.render("lists.html", lists=lists, stalking=stalking)
 
 class friends( BaseRequestHandler ):
     def get( self ):
