@@ -12,8 +12,7 @@ re_fbid = re.compile("access_token=(?P<pk>[^&]*)")
 class BaseRequestHandler( tornado.web.RequestHandler ):
     def get_current_user( self ):
         cookie = self.get_cookie("fbs_204128796282802") 
-        fbid = re_fbid.match(cookie)
-        raise Exception(str((fbid,cookie)))
+        fbid = re_fbid.search(cookie)
         return fbid.groups()[0]
 
 
