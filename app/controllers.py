@@ -8,7 +8,7 @@ db = tornado.database.Connection(
     user="root", password="mengomengo", 
 )
 
-re_fbid = re.compile("uid=(?P<uid>[^&]*)")
+re_fbid = re.compile("uid=(?P<uid>[^&\\\"]*)")
 class BaseRequestHandler( tornado.web.RequestHandler ):
     def get_current_user( self ):
         cookie = self.get_cookie("fbs_204128796282802") 
