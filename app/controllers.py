@@ -12,6 +12,7 @@ re_fbid = re.compile("access_token=(?P<pk>[^&]*)")
 class BaseRequestHandler( tornado.web.RequestHandler ):
     def get_current_user( self ):
         cookie = self.get_cookie("fbs_204128796282802") 
+        raise Exception(cookie)
         fb_id = re_fbid.search(cookie).groups()[0]
         return db.execute("insert ignore user(fb_id) values(%s)", fb_id)
 
