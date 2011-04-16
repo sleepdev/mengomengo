@@ -10,7 +10,7 @@
       <a href="/upload" rel="facebox"><button>Upload a Video</button></a>
     </div>
     <ul class="list">
-      {% for video in [ {'group':'Naruto', 'order':'Episode 22', 'title':'Fight to the death!', 'img':'x' }, {'group':'iJustine', 'order':'Episode 67', 'title':'Why am I glowing?', 'img':'x'} ] %}
+      {% for video in news %}
         <li>
           <img src='{{ video['img'] }}'/>
           <p>{{ video['group'] }} ({{ video['order'] }})</p>
