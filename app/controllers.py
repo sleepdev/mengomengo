@@ -13,8 +13,7 @@ class BaseRequestHandler( tornado.web.RequestHandler ):
     def get_current_user( self ):
         cookie = self.get_cookie("fbs_204128796282802") 
         fb_id = re_fbid.search(cookie).groups()[0]
-        db.execute("insert ignore user(fb_id) values(%s)", fb_id)
-        return db.get("select id from user where fb_id=%s", fb_id).id
+        return db.execute("insert ignore user(fb_id) values(%s)", fb_id)
 
 class index( BaseRequestHandler ):
     def get( self ):
