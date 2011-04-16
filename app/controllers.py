@@ -59,16 +59,25 @@ class upload( BaseRequestHandler ):
     def get( self ):
         self.render("upload.html")
 
-
 class about( BaseRequestHandler ):
     @tornado.web.authenticated
     def get( self ):
         self.render("about.html")
 
+class blog( BaseRequestHandler ):
+    @tornado.web.authenticated
+    def get( self ):
+        self.render("blog.html")
+
 class contact( BaseRequestHandler ):
     @tornado.web.authenticated
     def get( self ):
         self.render("contact.html")
+
+class copyright( BaseRequestHandler ):
+    @tornado.web.authenticated
+    def get( self ):
+        self.render("copyright.html")
 
 class privacy( BaseRequestHandler ):
     @tornado.web.authenticated

@@ -24,7 +24,9 @@ application = tornado.web.Application( [
     ( "/upload",                    controllers.upload           ),
 
     ( "/about",                     controllers.about            ),
+    ( "/blog",                      controllers.blog             ),
     ( "/contact",                   controllers.contact          ),
+    ( "/copyright",                 controllers.copyright        ),
     ( "/privacy",                   controllers.privacy          ),
     ( "/terms",                     controllers.terms            ),
 
