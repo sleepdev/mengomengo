@@ -103,9 +103,8 @@ ul.news-feed li { padding: 10px 15px; border-bottom: 1px solid #7FFF24; }
 #player-page table .fb_iframe_widget { margin-top: 50px; }
 
 #static-page { width: 950px; margin: 0px auto; }
-#static-page h1 { margin: 30px 15px 5px; color: #FBB829; }
+#static-page h1 { margin: 30px 15px 15px; color: #FBB829; }
 #static-page p { margin-bottom: 10px; }
-#static-page p:before { content: "\00a0\00a0\00a0\00a0" }
 
 #landing { display: table; width: 950px; margin: 0 auto; }
 #landing h1 { padding: 50px 0; text-align: center; font-weight: bold; font-size: 90px; color: #FBB829; }
