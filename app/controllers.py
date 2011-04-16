@@ -20,7 +20,7 @@ class index( BaseRequestHandler ):
     def get( self ):
         if self.current_user:
             news = db.query("select v.* from stalking as s,list as l,video as v "
-                "on s.victim=l.id and l.id=v.list"
+                "on s.victim=l.id and l.id=v.list "
                 "where s.stalker=%s "
                 "order by v.created_at", self.current_user)
             self.render("wall.html", news=news )
