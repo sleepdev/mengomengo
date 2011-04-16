@@ -13,7 +13,7 @@ class BaseRequestHandler( tornado.web.RequestHandler ):
     def get_current_user( self ):
         cookie = self.get_cookie("fbs_204128796282802") 
         fbid = re_fbid.match(cookie)
-#        raise Exception(str((fbid,cookie)))
+        raise Exception(str((fbid,cookie)))
         return fbid.groups()[0]
 
 
