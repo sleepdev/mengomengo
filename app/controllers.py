@@ -12,9 +12,9 @@ re_fbid = re.compile("access_token=(?P<pk>[^&]*)")
 class BaseRequestHandler( tornado.web.RequestHandler ):
     def get_current_user( self ):
         cookie = self.get_cookie("fbs_204128796282802") 
-        fbid = re_fbid.search(cookie)
-        return fbid.groups()[0]
-
+        fb_id = re_fbid.search(cookie).groups()[0]
+        db.execute("insert ignore user(fb_id) values(%s)", fb_id)
+        return db.get("select id from user where fb_id=%s", fb_id).id
 
 class index( BaseRequestHandler ):
     def get( self ):
@@ -29,6 +29,8 @@ class index( BaseRequestHandler ):
 class lists( BaseRequestHandler ):
     def get( self ):
         user = self.get_argument("user",self.current_user)
+        lists = db.query("select * from lists where owner=%s", self.current_user)
+        stalking = db.query("select l.* from stalking as s,list as l where l.id=s.victim and s.stalker=%s")
         self.render("lists.html")
 
 class friends( BaseRequestHandler ):
